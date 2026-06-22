@@ -1,0 +1,51 @@
+Brief: "La Brasa Dorada" — Restaurante de comida a la parrilla
+Contexto ficticio: Es un restaurante familiar, ambiente cálido, 
+especializado en carnes a la parrilla y platos típicos centroamericanos. Quieren una página de una sola vista (landing) con su menú.
+
+Contenido a estructurar
+Encabezado del sitio:
+
+Nombre: "La Brasa Dorada"
+Eslogan: "Sabor de casa, fuego de leña"
+Navegación: Inicio, Menú, Sobre Nosotros, Contacto
+
+Sección "Sobre Nosotros" (breve):
+
+2-3 líneas de texto: llevan 15 años en el barrio, recetas de la abuela, todo a la parrilla con leña.
+Una imagen del local o del chef (usa cualquier placeholder, ej. https://placehold.co/600x400).
+
+Sección "Menú" — dividida en categorías:
+Entradas
+
+Yuca frita con chimol — L. 65
+Tajaditas con queso — L. 45
+Sopa de caracol — L. 95
+
+Platos fuertes
+
+Churrasco a la parrilla (con tortillas, frijoles, chismol) — L. 220
+Pollo a la brasa entero — L. 180
+Costillas BBQ — L. 195
+Plato vegetariano de la casa — L. 140
+
+Bebidas
+
+Horchata — L. 30
+Limonada con menta — L. 35
+Cerveza nacional — L. 50
+
+Postres
+
+Tres leches — L. 60
+Flan de coco — L. 55
+
+Sección "Contacto":
+
+Formulario con: nombre, correo, teléfono, mensaje, y un select para "Motivo" (Reservación / Pregunta / Evento privado).
+Botón "Enviar mensaje".
+Dirección física, horario de atención (texto, no formulario).
+Link a redes sociales (puedes usar # como href por ahora).
+
+Pie de página:
+
+Copyright, año actual, link a redes.

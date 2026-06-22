@@ -1,0 +1,36 @@
+*{
+
+    box-sizing: border-box;
+}
+
+h1{
+color: aqua;
+}
+
+#titulo{
+    color: brown;
+}
+
+.tituloC{
+    color: bisque;
+}
+
+body{
+    color: green;
+}
+
+h2 {
+    color: purple;
+}
+
+h2 {
+    color: orange;
+}
+
+.titulo-sobre-nosotros{
+    /*box-sizing: border-box;*/
+    width: 300px;
+    padding: 20px;
+    border: 3px solid black;
+    margin: 40px;
+}

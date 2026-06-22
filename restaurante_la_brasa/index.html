@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>La Brasa Dorada - Restaurante a la parrilla en Tegucigalpa</title>
+        <meta name="description" content="Restaurante familiar en Tegucigalpa especializado en carnes a la parrilla con leña. 15 años sirviendo recetas tradicionales hondureñas. Reserva tu mesa en La Brasa Dorada.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="estilos.css">
+    </head>
+    <body>
+        <header>
+                <h1 id="titulo" class="tituloC">La Brasa Dorada</h1>
+            <p>
+                Sabor de casa, fuego de leña
+            </p>
+            <nav>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#sobre_nosotros">Sobre nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="sobre_nosotros">
+                <h2 class="titulo-sobre-nosotros">Sobre nosotros</h2>
+                <img src="https://placehold.co/600x400" alt="Chef preparando un estofado">
+                <p>
+                    Desde hace 15 años somos parte del barrio, sirviendo
+                    con orgullo las recetas que mi abuela nos enseñó. 
+                    Cada plato sale de nuestra parrilla de leña, igual 
+                    que se ha hecho siempre en casa: con paciencia, 
+                    fuego de verdad y mucho cariño.
+                </p>
+            </section>
+
+            <section id="menu">
+                <h2>Menu</h2>
+                <h3>Entradas</h3>
+                    <ul>
+                        <li>Yuca frita con chimol - L. 65</li>
+                        <li>Tajaditas con queso - L. 45</li>
+                        <li>Sopa de caracol - L. 95</li>
+                    </ul>
+                <h3>Platos fuertes</h3>
+                   <ul>
+                        <li>Churrasco a la parrilla (con tortillas, frijoles, chismol) — L. 220</li>
+                        <li>Pollo a la brasa entero — L. 180</li>
+                        <li>Costillas BBQ — L. 195</li>
+                        <li>Plato vegetariano de la casa — L. 140</li>
+                    </ul>                
+                <h3>Bebidas</h3>
+                    <ul>
+                        <li>Horchata — L. 30</li>
+                        <li>Limonada con menta — L. 35</li>
+                        <li>Cerveza nacional — L. 50</li>
+                    </ul>    
+                <h3>Postres</h3>
+                    <ul>
+                        <li>Tres leches — L. 60</li>
+                        <li>Flan de coco — L. 55</li>
+                    </ul>   
+            </section>
+
+            <section id="contacto"> 
+                <h2>Formulario de contacto</h2>
+                <form method="post">
+                <fieldset>
+                    <legend>Información de contacto</legend>
+                    <div>
+                        <label for="name">Nombre completo: </label>
+                        <input type="text" id="name" name="nombre" required/>
+                    </div>
+                    <div>
+                        <label for="email">Correo electronico:  </label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    <div>
+                        <label for="tel">Telefono: </label>
+                        <input type="tel" id="tel" name="tel">
+                    </div>
+                </fieldset>
+
+                <div>
+                    <label for="mensaje">Mensaje: </label>
+                    <textarea id="mensaje" name="mensaje" rows="5" 
+                        cols="33" placeholder="Escribe aqui..." required></textarea>
+                </div>
+
+                <fieldset>
+                    <legend>Menu: </legend>
+                    <label for="motivo">Motivo:</label>
+                    <select name="opcion" id="motivo" required>
+                        <option value="" disabled selected>Elige una opcion</option>
+                    <option value="reservacion">Reservacion</option>
+                    <option value="pregunta">Pregunta</option>
+                    <option value="evento_privado">Evento privado</option>
+                    </select>
+                </fieldset>
+                <div >
+                    <button type="submit">Enviar formulario</button>
+                </div>
+                </form>
+
+                <address>
+                    <p>
+                        Colonia Palmira, Avenida República de Chile, 
+                        casa #1542, Tegucigalpa, Honduras
+                    </p>
+                    <p>
+                    Horario: <br>
+                    Lunes a Sábado: 11:00 AM – 9:00 PM <br>
+                    Domingo: 12:00 PM – 6:00 PM
+                    </p>
+                </address>
+            </section>
+        </main>
+
+        <footer>
+               <p>&copy; 2026 La Brasa Dorada. Todos los derechos reservados.</p>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                    </ul>
+        </footer>
+    </body>
+</html>
