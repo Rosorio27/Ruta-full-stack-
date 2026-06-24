@@ -1,36 +1,69 @@
 *{
-
     box-sizing: border-box;
 }
 
-h1{
-color: aqua;
-}
-
-#titulo{
-    color: brown;
-}
-
-.tituloC{
-    color: bisque;
-}
-
 body{
-    color: green;
+    background-color: #FAF3E7;
+   font-family: "Lato", sans-serif;
 }
 
-h2 {
-    color: purple;
+
+html{
+    font-size: 16px;
 }
 
-h2 {
-    color: orange;
+#sobre_nosotros{
+   padding: 10px;
+   border: 3px solid black;
+   margin: 20px;
+   
 }
 
-.titulo-sobre-nosotros{
-    /*box-sizing: border-box;*/
-    width: 300px;
-    padding: 20px;
-    border: 3px solid black;
-    margin: 40px;
+ h2, h3 {
+    font-size: 1em;
+    color: #B33A1E;;
 }
+
+h1, h2, h3 {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+}
+
+p, li, label {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+}
+
+#boton{
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    color: #3E2723;
+    border: 2px solid currentColor;
+    background:  #D4A017;
+}
+
+#boton:hover{
+    background-color: #B33A1E;  
+    color: white;
+}
+
+header{
+    color: #3E2723;
+}
+
+header h1{
+    color: #B33A1E;
+}
+
+footer{
+    color: #3E2723;
+}
+
+a{
+    color: #B33A1E;
+}
+
+p, ul {
+    color: #6D4C41;
+}
+
