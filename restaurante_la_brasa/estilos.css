@@ -67,3 +67,10 @@ p, ul {
     color: #6D4C41;
 }
 
+header {
+    position: sticky;
+    top: 0; 
+    background-color: #FAF3E7;
+    padding: 20px;
+}
+   

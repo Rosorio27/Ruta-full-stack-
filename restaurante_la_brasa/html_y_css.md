@@ -51,3 +51,9 @@
     line-heigjt: espacio entre linea (interlineado )
 
     text-align: aliniamento del texto 
+
+### Position 
+
+    Por defecto el documento html tiene una posicion static. De arriba a abajo uno sobre otro 
+
+    Position relative: El elemento se mueve visualmente pero el espacio que ocupaba sigue reservado 
