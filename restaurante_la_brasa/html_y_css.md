@@ -57,3 +57,19 @@
     Por defecto el documento html tiene una posicion static. De arriba a abajo uno sobre otro 
 
     Position relative: El elemento se mueve visualmente pero el espacio que ocupaba sigue reservado 
+
+    position absolute: Puede colocarse en cualqueir lugar y no deja rastro. Se situa respescto al ancestro mas cercano que tenga
+                        necesito un contenedor con un position: relativo como referencia. sino toma el html completo como referencia total
+
+    position fixed: no deja rastro, pero su punto de referencia es la ventana del navegador si queda anclado a la pantalla anque hagas scroll 
+
+    position sticky: posiciona hasta que su contenedor padre sea superado por el scroll al bajar ahi permanece el bloque estatico mientras su contenedor padre sea visible en la pantalla 
+
+### transiciones 
+
+    consiste en una propiedad cambie el valor suevemente durante x tiempo 
+
+    
+
+
+
