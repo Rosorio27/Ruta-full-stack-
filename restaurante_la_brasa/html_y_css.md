@@ -69,6 +69,10 @@
 
     consiste en una propiedad cambie el valor suevemente durante x tiempo 
 
+    los rangos van de 0.2s a 0.4s para que se sienta la fluidez de la transicion 
+
+    
+
     
 
 
