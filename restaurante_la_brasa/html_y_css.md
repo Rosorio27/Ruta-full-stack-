@@ -65,13 +65,54 @@
 
     position sticky: posiciona hasta que su contenedor padre sea superado por el scroll al bajar ahi permanece el bloque estatico mientras su contenedor padre sea visible en la pantalla 
 
+    usos reales: 
+
+
+
 ### transiciones 
 
     consiste en una propiedad cambie el valor suevemente durante x tiempo 
 
     los rangos van de 0.2s a 0.4s para que se sienta la fluidez de la transicion 
 
-    
+    necesita un apuntador a:hover, a:focus etc 
+
+    usos reales: 
+
+        cambio de color en hover
+        cambio de borde en focus 
+        efecto zoom en hover 
+        sombra que aparece en hover 
+        menus que se abre y cierra suevamente  
+
+### animaciones 
+
+    @keyframes nombre de la animacion {
+        0% {}estado inicial
+        50% {}estado intermedio
+        100% {}estado final 
+    }
+
+    .elemento{
+        animacion: nombre de la animacion 2s ease-in-out infiniteve; 
+    }                 (nombre)             (duracion)        (repeticion)
+
+
+   usos reales: 
+
+     aparicion de contenido al cargar 
+
+### Variables en css 
+
+    se usan para guardar un valor y reutilizarlo en todo el proyecto 
+
+    : root {
+
+        --propiedad: valor; 
+    }
+
+
+
 
     
 

@@ -31,48 +31,60 @@
             </nav>
         </header>
 
-        <main>
-
-            
-            
+        <main>  
             <section id="sobre_nosotros">
-                <h2 class="titulo-sobre-nosotros">Sobre nosotros</h2>
-                <img src="https://placehold.co/600x400" alt="Chef preparando un estofado">
-                <p>
-                    Desde hace 15 años somos parte del barrio, sirviendo
-                    con orgullo las recetas que mi abuela nos enseñó. 
-                    Cada plato sale de nuestra parrilla de leña, igual 
-                    que se ha hecho siempre en casa: con paciencia, 
-                    fuego de verdad y mucho cariño.
-                </p>
-            </section>
+                <div class="sobrenos">
+                    <h2 class="titulo-sobre-nosotros">Sobre nosotros</h2>
+                    <img src="https://placehold.co/600x400" alt="Chef preparando un estofado">
+                    <p>
+                        Desde hace 15 años somos parte del barrio, sirviendo
+                        con orgullo las recetas que mi abuela nos enseñó. 
+                        Cada plato sale de nuestra parrilla de leña, igual 
+                        que se ha hecho siempre en casa: con paciencia, 
+                        fuego de verdad y mucho cariño.
+                    </p>
+                </div>
+            </section>    
 
             <section id="menu">
                 <h2>Menu</h2>
-                <h3>Entradas</h3>
+                <div class="categorias-menu">
+                    <div class="categoria">
+                    <h3>Entradas</h3>
+                        <ul>
+                            <li>Yuca frita con chimol - L. 65</li>
+                            <li>Tajaditas con queso - L. 45</li>
+                            <li>Sopa de caracol - L. 95</li>
+                        </ul>
+                </div>
+
+                <div class="categoria">
+                    <h3>Platos fuertes</h3>
                     <ul>
-                        <li>Yuca frita con chimol - L. 65</li>
-                        <li>Tajaditas con queso - L. 45</li>
-                        <li>Sopa de caracol - L. 95</li>
-                    </ul>
-                <h3>Platos fuertes</h3>
-                   <ul>
                         <li>Churrasco a la parrilla (con tortillas, frijoles, chismol) — L. 220</li>
                         <li>Pollo a la brasa entero — L. 180</li>
                         <li>Costillas BBQ — L. 195</li>
                         <li>Plato vegetariano de la casa — L. 140</li>
-                    </ul>                
-                <h3>Bebidas</h3>
-                    <ul>
-                        <li>Horchata — L. 30</li>
-                        <li>Limonada con menta — L. 35</li>
-                        <li>Cerveza nacional — L. 50</li>
-                    </ul>    
-                <h3>Postres</h3>
-                    <ul>
-                        <li>Tres leches — L. 60</li>
-                        <li>Flan de coco — L. 55</li>
-                    </ul>   
+                    </ul>
+                </div>
+
+                <div class="categoria">
+                    <h3>Bebidas</h3>
+                        <ul>
+                            <li>Horchata — L. 30</li>
+                            <li>Limonada con menta — L. 35</li>
+                            <li>Cerveza nacional — L. 50</li>
+                        </ul>
+                </div>
+
+                <div class="categoria">
+                    <h3>Postres</h3>
+                        <ul>
+                            <li>Tres leches — L. 60</li>
+                            <li>Flan de coco — L. 55</li>
+                        </ul>
+                </div>
+                </div>
             </section>
 
             <section id="contacto"> 
@@ -80,18 +92,21 @@
                 <form method="post">
                 <fieldset>
                     <legend>Información de contacto</legend>
-                    <div>
-                        <label for="name">Nombre completo: </label>
-                        <input type="text" id="name" name="nombre" required/>
-                    </div>
-                    <div>
-                        <label for="email">Correo electronico:  </label>
-                        <input type="email" id="email" name="email">
-                    </div>
-                    <div>
-                        <label for="tel">Telefono: </label>
-                        <input type="tel" id="tel" name="tel">
-                    </div>
+                    
+                    <div class="conteiner">
+                        <div class="flex">
+                            <label for="name">Nombre completo: </label>
+                            <input type="text" id="name" name="nombre" required/>
+                        </div>
+                        <div class="flex">
+                            <label for="email">Correo electronico:  </label>
+                            <input type="email" id="email" name="email">
+                        </div>
+                    </div> 
+                     <div class="flex2">
+                            <label for="tel">Telefono: </label>
+                            <input type="tel" id="tel" name="tel">
+                        </div>                   
                 </fieldset>
 
                 <div>
@@ -102,17 +117,24 @@
 
                 <fieldset>
                     <legend>Menu: </legend>
-                    <label for="motivo">Motivo:</label>
-                    <select name="opcion" id="motivo" required>
-                        <option value="" disabled selected>Elige una opcion</option>
-                    <option value="reservacion">Reservacion</option>
-                    <option value="pregunta">Pregunta</option>
-                    <option value="evento_privado">Evento privado</option>
-                    </select>
+                    <div class="selecion_multiple">
+                        <div class="grupo-select">
+                            <label for="motivo">Seleccionar:</label>
+
+                             <select name="opcion" id="motivo" required>
+                                <option value="" disabled selected>Elige una opcion</option>
+                                <option value="reservacion">Reservacion</option>
+                                <option value="pregunta">Pregunta</option>
+                                <option value="evento_privado">Evento privado</option>
+                            </select>
+                        </div>
+                
+                        <div>
+                            <button type="submit" id="boton">Enviar formulario</button>
+                        </div> 
+
+                    </div>
                 </fieldset>
-                <div >
-                    <button type="submit" id="boton">Enviar formulario</button>
-                </div>
                 </form>
 
                 <address>
@@ -130,11 +152,17 @@
         </main>
 
         <footer>
-               <p>&copy; 2026 La Brasa Dorada. Todos los derechos reservados.</p>
+            <div class="footer">
+               <div class="copyright">
+                    <p>&copy; 2026 La Brasa Dorada. Todos los derechos reservados.</p>
+               </div> 
+               <div class="redes_sociales">
                     <ul>
                         <li><a href="#">Facebook</a></li>
                         <li><a href="#">Instagram</a></li>
                     </ul>
+               </div>               
+            </div>
         </footer>
     </body>
 </html>
