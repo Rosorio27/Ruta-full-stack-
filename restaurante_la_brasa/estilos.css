@@ -98,6 +98,7 @@ a:hover {
 img {
     transition: transform 0.3s ease;
 }
+
 img:hover {
     transform: scale(1.05);  /* crece 5% */
 }
@@ -144,7 +145,7 @@ nav ul {
     gap: 20px;
 }
 
-.categorias-menu{
+/*.categorias-menu{
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
@@ -153,15 +154,19 @@ nav ul {
 .categoria{
    flex: 2;
   min-width: 200px; 
+}*/
+
+.categorias-menu{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
 }
 
 .conteiner{
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    justify-content: flex-start;
-
-    
+    justify-content: flex-start;    
 }
 
 .flex{
@@ -178,18 +183,19 @@ nav ul {
 }
 
 .sobrenos{
-    display: flex;
-    flex-direction: column;   
-    align-items: center; 
-    gap: 30px;
-    height: 600px; 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    align-items: center;
 }
 
+.sobrenos .titulo-sobreNos{
+   grid-column: 1 / -1;
+   text-align: center;
+}
 
-.sobrenos h2,
-.sobrenos img,
-.sobrenos p {
-    flex: 1;
+.sobrenos .imagen{
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
 }
 
 .footer{
@@ -217,4 +223,82 @@ a {
     display: flex;
     align-items: center;
     gap: 5px;     
+}
+
+.marco{
+    background-color:hsl(30, 20, 80);
+    padding: 15px;
+    border: 1px solid var(--color-dorado);
+    margin: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.marco img {
+    max-width: 100%;
+    height: auto;
+}
+
+.marco .img_grande{
+    grid-column: 1 / 3;    
+}
+
+.marco .img_normal{
+    grid-column: 3 /4;    
+}
+
+.contenedorTarjetas{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    border: 1px solid var(--color-dorado);
+    padding: 15px;
+}
+
+.tarjeta1{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+}
+
+.tarjeta2{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+}
+
+.tarjeta3{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+}
+
+
+
+.tarjeta1 p{
+    font-family: "Lato", sans-serif;
+    color: var(--color-acento);
+    text-align: center;
+}
+
+.tarjeta2 p{
+    font-family: "Lato", sans-serif;
+    color: var(--color-acento);
+    text-align: center;
+}
+
+.tarjeta3 p{
+    font-family: "Lato", sans-serif;
+    color: var(--color-acento);
+    text-align: center;
+}
+
+.contenedorTarjetas  .buttones{
+    max-width: 250px;
+    align-items: center;
+  
 }
