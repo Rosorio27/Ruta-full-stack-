@@ -58,4 +58,56 @@
     rem    |  Relativo font-size de la raiz html        |   La mas recomendada hoy en dia para casi todo 
     vh/vw  |  porcentaje del alto y ancho de la ventana |   Elementos a pantalla completa, hero sections 
 
-    
+## overflow 
+
+    Se usa para el desbordamiento dentro del contenedor 
+
+    visible: por defercto el contenido se desborda 
+
+    hidden: oculta dentro de contenedor no se sale 
+
+    scroll: se muestra barra scroll a los lados y abajo 
+
+    auto: muestra las barras solo si son necesarias 
+
+## position 
+
+    static: por defecto. no tiene efecto top, right, botton y left 
+
+    relative: El el elemento de referencia para cualquier clase hija (absolute)
+
+    absolute: se posiciona con top/right/botton/left respesto a relative si no tiene ningun ancestro se posicion respeto a todo html
+
+    fixed: se posicion en cualquier lugar respectoa  l aventana del navegador 
+
+    sticky: se puede dejar fijo un elemento 
+
+        top — distancia desde el borde superior
+        right — distancia desde el borde derecho
+        bottom — distancia desde el borde inferior
+        left — distancia desde el borde izquierdo
+        z-index — orden de apilamiento cuando hay superposición
+
+## Object-fit 
+
+    controla como una imagen o video se ajusta dentro de su  contenedor cuando las proporciones no coinciden exactamente 
+
+    fill: estira la imagen para llenar completamente el contenedor aunque se distorcione 
+
+    cover: la imagen cubre todo el contenedor sin distorsionarse  pero recorla lo que sobra. 
+
+    contain: la imagen se escala para caber completa dentro del contenedor, sin recortarse ni distorsionarse. puede derjar espacios vacios 
+
+## display
+
+    block: El elemento ocupa todo el ancho disponible y siempre empieza en una nueva linea 
+
+    inline: El elemento solo ocupa el espacio de us contenido. no respeta width y heght
+
+    inline-block: combina elementeo en linea pero respeta otros atributos 
+
+    flex: convierte al elementeo en un contenedor flexible. 
+
+    grid: convierte al elementeo en un contenedor cuadricula 
+
+    none: desaparece completamente un elemento. 
