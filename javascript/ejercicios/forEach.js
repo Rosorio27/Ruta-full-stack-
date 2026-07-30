@@ -9,3 +9,4 @@ const nuevoArray = gastos.map((gasto) => gasto * 0.9 );
 
 console.log(nuevoArray.join(" ")); 
 console.log(gastos.join(" ")); 
+

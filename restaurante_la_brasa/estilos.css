@@ -292,6 +292,11 @@ a {
     align-items: center;  
 }
 
+.resaltado {
+  background-color: yellow;
+  color: black;
+}
+
 @media (max-width: 900px) {
     .marco {
         grid-template-columns: repeat(2, 1fr);

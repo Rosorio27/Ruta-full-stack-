@@ -13,6 +13,3 @@ const totalGastado = gastos.reduce((acum , sumado) => acum + sumado.monto, 0);
 console.log(nombreGastos);
 console.log(gastosCategoriaX);
 console.log(totalGastado);
-
-
-
