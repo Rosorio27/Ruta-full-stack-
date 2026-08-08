@@ -17,6 +17,7 @@ boton.addEventListener("click", ()=>{
     if (inputselect.value === ""){
         console.log("ingresa un valor")
     }else{
+        
         const textoUsuario = inputselect.value;
         const nuevoli = document.createElement("li");
         nuevoli.textContent = textoUsuario; 

@@ -3,232 +3,375 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>La Brasa Dorada - Restaurante a la parrilla en Tegucigalpa</title>
-        <meta name="description" content="Restaurante familiar en Tegucigalpa especializado en carnes a la parrilla con leña. 15 años sirviendo recetas tradicionales hondureñas. Reserva tu mesa en La Brasa Dorada.">
+        <title>La Brasa Dorada · Steakhouse & Parrilla en Tegucigalpa</title>
+        <meta name="description" content="Steakhouse de alta gama en Tegucigalpa. Carnes maduradas a la parrilla de leña, recetas tradicionales hondureñas desde 2011. Reserva tu mesa en La Brasa Dorada.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        
+
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400;1,500;1,600;1,700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 
         <link rel="stylesheet" href="estilos.css">
-
     </head>
-    
+
     <body>
-        <header>
-                <h1 id="titulo" class="tituloC">La Brasa Dorada</h1>
-            <p>
-                Sabor de casa, fuego de leña
-            </p>
-            <nav>
-                <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#menu">Menu</a></li>
-                    <li><a href="#sobre_nosotros">Sobre nosotros</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
+        <!-- ================= HEADER ================= -->
+        <header class="header">
+            <nav class="nav">
+                <a href="#" class="brand">La Brasa <em>Dorada</em></a>
+                <ul class="nav-links">
+                    <li><a href="#historia">Historia</a></li>
+                    <li><a href="#especialidades">Especialidades</a></li>
+                    <li><a href="#menu">La Carta</a></li>
+                    <li><a href="#contacto">Reservas</a></li>
                 </ul>
+                <a href="#contacto" class="nav-cta">Reservar mesa</a>
             </nav>
         </header>
 
-        <main>  
-            <section id="sobre_nosotros">
-                <div class="sobrenos">
-                    <div class="titulo-sobreNos">
-                          <h2 class="titulo-sobre-nosotros">Sobre nosotros</h2>
+        <main>
+            <!-- ================= HERO ================= -->
+            <section class="hero">
+                <div class="hero-contenido">
+                    <p class="eyebrow">Est. 2011 · Tegucigalpa</p>
+                    <h1 class="hero-titulo">La Brasa<br><em>Dorada</em></h1>
+                    <p class="hero-lema">
+                        Carnes a la parrilla de leña <span class="punto">◆</span>
+                        tradición hondureña <span class="punto">◆</span>
+                        sabor de casa
+                    </p>
+                    <div class="hero-acciones">
+                        <a href="#menu" class="btn btn-oro">Explorar la carta</a>
+                        <a href="#contacto" class="btn btn-borde">Reservar mesa</a>
                     </div>
-                  
-                    <div class="imagen">
-                          <img src="https://placehold.co/600x400" alt="Chef preparando un estofado">
-                    </div>
+                </div>
+                <div class="hero-barra">
+                    <span class="linea"></span>
+                    <span class="diamante">◆</span>
+                    <span class="linea"></span>
+                </div>
+            </section>
 
-                    <div class="parrafo">
+            <!-- ================= HISTORIA ================= -->
+            <section id="historia" class="seccion">
+                <p class="eyebrow">Desde 2011</p>
+                <h2 class="titulo-seccion">Nuestra <em>historia</em></h2>
+                <p class="contador-tradicion">
+                    <span data-contador="15">0</span> años de tradición
+                </p>
+
+                <div class="historia-grid">
+                    <figure class="historia-imagen">
+                        <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=800&auto=format&fit=crop" alt="Chef preparando carnes en la parrilla de leña">
+                        <figcaption>El fuego de leña es nuestro primer ingrediente.</figcaption>
+                    </figure>
+
+                    <div class="historia-texto">
+                        <p class="cita">
+                            “Cada plato sale de nuestra parrilla de leña, igual que
+                            se ha hecho siempre en casa: con paciencia,
+                            fuego de verdad y mucho cariño.”
+                        </p>
                         <p>
                             Desde hace 15 años somos parte del barrio, sirviendo
-                            con orgullo las recetas que mi abuela nos enseñó. 
-                            Cada plato sale de nuestra parrilla de leña, igual 
-                            que se ha hecho siempre en casa: con paciencia, 
-                            fuego de verdad y mucho cariño.
+                            con orgullo las recetas que mi abuela nos enseñó.
                         </p>
-                    </div>
-                        
-                    </div>
-                </div>
-            </section>    
-
-            <section id="galeria">
-                <h2>Nuestro servicios</h2>
-                <div class="marco">
-                    
-                    <div class="img_grande">
-                        <img src="https://placehold.co/800x400" alt="imagen grande de la cuadrícula">
-                    </div>
-                    
-                     <div class="img_normal">
-                        <img src="https://placehold.co/400" alt="imagen 1 de la cuadricula">
-                    </div>
-
-                     <div class="img_normal1">
-                        <img src="https://placehold.co/400" alt="imagen 1 de la cuadricula">
-                    </div>
-
-                     <div class="img_normal2">
-                        <img src="https://placehold.co/400" alt="imagen 1 de la cuadricula">
-                    </div>
-
-                     <div class="img_normal3">
-                        <img src="https://placehold.co/400" alt="imagen 1 de la cuadricula">
+                        <div class="firma">
+                            <span class="firma-linea"></span>
+                            <span class="firma-nombre">La familia Rosario</span>
+                        </div>
+                        <a href="#menu" class="enlace-oro">Descubrir la carta →</a>
                     </div>
                 </div>
             </section>
 
-            <section>
-                <h2>Platos destacados</h2>
-                <div class="contenedorTarjetas">
-                    <div class="tarjeta">
-                        <h3>Churrasco Especial</h3>
-                        <img src="https://tofuu.getjusto.com/orioneat-local/resized2/FbwTdKzyQSQbHyKmG-300-x.webp" alt="Imagen de mariposa">
-                        <p>Precio especial: $ 3</p>
-                        <button class="buttones" id="boton1">Ver mas</button>
-                    </div>
+            <!-- ================= ESPECIALIDADES ================= -->
+            <section id="especialidades" class="seccion seccion-brasa">
+                <p class="eyebrow">Especialidades</p>
+                <h2 class="titulo-seccion">Cortes & <em>Tradición</em></h2>
 
-                    <div class="tarjeta">
-                        <h3>Costillas BBQ</h3>
-                        <img src="https://chilis.com.mx/assets/img/menu/a/categorias/baby-back-ribs/famous-baby-back-ribs.jpg" alt="Imagen de mariposa">
-                        <p>Precio especial: $ 7.5</p>
-                        <button class="buttones" id="botonCostillas">Ver mas</button>
-                    </div>
-                    
-                    <div class="tarjeta">
-                        <h3>Pollo a la brasa</h3>
-                        <img src="https://statics.lakaribena.com.pe/2024/07/crop/669d57a7e0add__400x300.webp" alt="Imagen de mariposa">
-                        <p>Precio especial: $ 9.99</p>
-                        <button class="buttones">Ver mas</button>
-                    </div>
+                <div class="especialidades-grid">
+                    <figure class="especialidad especialidad-grande">
+                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=800&auto=format&fit=crop" alt="Parrilla con cortes de carne asándose">
+                        <figcaption>
+                            <span class="especialidad-tag">El clásico</span>
+                            <span class="especialidad-nombre">La parrilla de la casa</span>
+                        </figcaption>
+                    </figure>
 
+                    <figure class="especialidad">
+                        <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?q=80&w=500&auto=format&fit=crop" alt="Corte de carne madurado">
+                        <figcaption>
+                            <span class="especialidad-tag">Madurado</span>
+                            <span class="especialidad-nombre">Cortes selectos</span>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="especialidad">
+                        <img src="https://images.unsplash.com/photo-1558030006-450675393462?q=80&w=500&auto=format&fit=crop" alt="Fuego y brasas encendidas">
+                        <figcaption>
+                            <span class="especialidad-tag">Leña real</span>
+                            <span class="especialidad-nombre">Fuego de leña</span>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="especialidad">
+                        <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?q=80&w=500&auto=format&fit=crop" alt="Plato gourmet de la casa">
+                        <figcaption>
+                            <span class="especialidad-tag">Receta familiar</span>
+                            <span class="especialidad-nombre">Sabores de casa</span>
+                        </figcaption>
+                    </figure>
                 </div>
             </section>
 
-            <section id="menu">
-                <h2>Menu</h2>
-                <div class="categorias-menu">
-                    <div class="categoria">
-                    <h3>Entradas</h3>
-                        <ul>
-                            <li>Yuca frita con chimol - L. 65</li>
-                            <li>Tajaditas con queso - L. 45</li>
-                            <li>Sopa de caracol - L. 95</li>
-                        </ul>
-                </div>
+            <!-- ================= PLATOS DESTACADOS ================= -->
+            <section class="seccion">
+                <p class="eyebrow">Imperdibles</p>
+                <h2 class="titulo-seccion">Platos <em>destacados</em></h2>
 
-                <div class="categoria">
-                    <h3>Platos fuertes</h3>
-                    <ul>
-                        <li>Churrasco a la parrilla (con tortillas, frijoles, chismol) — L. 220</li>
-                        <li>Pollo a la brasa entero — L. 180</li>
-                        <li>Costillas BBQ — L. 195</li>
-                        <li>Plato vegetariano de la casa — L. 140</li>
-                    </ul>
-                </div>
+                <div class="destacados">
+                    <article class="plato-destacado">
+                        <div class="plato-destacado-img">
+                            <img src="https://images.unsplash.com/photo-1558030006-450675393462?q=80&w=600&auto=format&fit=crop" alt="Churrasco Especial">
+                            <span class="plato-destacado-precio">$3.00</span>
+                        </div>
+                        <div class="plato-destacado-info">
+                            <h3>Churrasco Especial</h3>
+                            <p>Madurado 21 días, sellado a la parrilla de leña</p>
+                            <button class="btn btn-oro" id="boton1">Ver más</button>
+                        </div>
+                    </article>
 
-                <div class="categoria">
-                    <h3>Bebidas</h3>
-                        <ul>
-                            <li>Horchata — L. 30</li>
-                            <li>Limonada con menta — L. 35</li>
-                            <li>Cerveza nacional — L. 50</li>
-                        </ul>
-                </div>
+                    <article class="plato-destacado">
+                        <div class="plato-destacado-img">
+                            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=600&auto=format&fit=crop" alt="Costillas BBQ">
+                            <span class="plato-destacado-precio">$7.50</span>
+                        </div>
+                        <div class="plato-destacado-info">
+                            <h3>Costillas BBQ</h3>
+                            <p>Glaseadas con nuestra salsa ahumada de la casa</p>
+                            <button class="btn btn-oro" id="botonCostillas">Ver más</button>
+                        </div>
+                    </article>
 
-                <div class="categoria">
-                    <h3>Postres</h3>
-                        <ul>
-                            <li>Tres leches — L. 60</li>
-                            <li>Flan de coco — L. 55</li>
-                        </ul>
-                </div>
+                    <article class="plato-destacado">
+                        <div class="plato-destacado-img">
+                            <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?q=80&w=600&auto=format&fit=crop" alt="Pollo a la brasa">
+                            <span class="plato-destacado-precio">$9.99</span>
+                        </div>
+                        <div class="plato-destacado-info">
+                            <h3>Pollo a la brasa</h3>
+                            <p>Marinado 12 horas, cocido sobre brasas de encino</p>
+                            <button class="btn btn-oro">Ver más</button>
+                        </div>
+                    </article>
                 </div>
             </section>
 
-            <section id="contacto"> 
-                <h2>Formulario de contacto</h2>
-                <form method="post">
-                <fieldset>
-                    <legend>Información de contacto</legend>
-                    
-                    <div class="conteiner">
-                        <div class="flex">
-                            <label for="name">Nombre completo: </label>
-                            <input type="text" id="name" name="nombre" required/>
+            <!-- ================= CARTA ================= -->
+            <section id="menu" class="seccion seccion-carta">
+                <p class="eyebrow">La Carta</p>
+                <h2 class="titulo-seccion">Menú del <em>asador</em></h2>
+
+                <div class="carta">
+                    <div class="carta-columna">
+                        <div class="carta-categoria">
+                            <h3>Entradas</h3>
+                            <ul>
+                                <li class="plato">
+                                    <div class="plato-info">
+                                        <span class="plato-nombre">Yuca frita con chimol</span>
+                                        <span class="plato-desc">Yuca crujiente, chimol fresco de la casa</span>
+                                    </div>
+                                    <span class="plato-precio">L. 65</span>
+                                </li>
+                                <li class="plato">
+                                    <div class="plato-info">
+                                        <span class="plato-nombre">Tajaditas con queso</span>
+                                        <span class="plato-desc">Plátano verde frito, queso derretido</span>
+                                    </div>
+                                    <span class="plato-precio">L. 45</span>
+                                </li>
+                                <li class="plato">
+                                    <div class="plato-info">
+                                        <span class="plato-nombre">Sopa de caracol</span>
+                                        <span class="plato-desc">Receta tradicional de la costa norte</span>
+                                    </div>
+                                    <span class="plato-precio">L. 95</span>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="flex">
-                            <label for="email">Correo electronico:  </label>
-                            <input type="email" id="email" name="email">
+
+                        <div class="carta-categoria">
+                            <h3>Bebidas</h3>
+                            <ul>
+                                <li class="plato">
+                                    <div class="plato-info">
+                                        <span class="plato-nombre">Horchata artesanal</span>
+                                        <span class="plato-desc">Elaborada al día, canela y vainilla</span>
+                                    </div>
+                                    <span class="plato-precio">L. 30</span>
+                                </li>
+                                <li class="plato">
+                                    <div class="plato-info">
+                                        <span class="plato-nombre">Limonada con menta</span>
+                                        <span class="plato-desc">Limón fresco, menta del huerto</span>
+                                    </div>
+                                    <span class="plato-precio">L. 35</span>
+                                </li>
+                                <li class="plato">
+                                    <div class="plato-info">
+                                        <span class="plato-nombre">Cerveza nacional</span>
+                                        <span class="plato-desc">Bien fría, como debe ser</span>
+                                    </div>
+                                    <span class="plato-precio">L. 50</span>
+                                </li>
+                            </ul>
                         </div>
-                    </div> 
-                     <div class="flex2">
-                            <label for="tel">Telefono: </label>
-                            <input type="tel" id="tel" name="tel">
-                        </div>                   
-                </fieldset>
-
-                <div>
-                    <label for="mensaje">Mensaje: </label>
-                    <textarea id="mensaje" name="mensaje" rows="5" 
-                        cols="33" placeholder="Escribe aqui..." required></textarea>
-                </div>
-
-                <fieldset>
-                    <legend>Menu: </legend>
-                    <div class="selecion_multiple">
-                        <div class="grupo-select">
-                            <label for="motivo">Seleccionar:</label>
-
-                             <select name="opcion" id="motivo" required>
-                                <option value="" disabled selected>Elige una opcion</option>
-                                <option value="reservacion">Reservacion</option>
-                                <option value="pregunta">Pregunta</option>
-                                <option value="evento_privado">Evento privado</option>
-                            </select>
-                        </div>
-                
-                        <div>
-                            <button type="submit" id="boton">Enviar formulario</button>
-                        </div> 
-
                     </div>
-                </fieldset>
-                </form>
 
-                <address>
-                    <p>
-                        Colonia Palmira, Avenida República de Chile, 
-                        casa #1542, Tegucigalpa, Honduras
-                    </p>
-                    <p>
-                    Horario: <br>
-                    Lunes a Sábado: 11:00 AM – 9:00 PM <br>
-                    Domingo: 12:00 PM – 6:00 PM
-                    </p>
-                </address>
+                    <div class="carta-columna">
+                        <div class="carta-categoria">
+                            <h3>Platos fuertes</h3>
+                            <ul>
+                                <li class="plato">
+                                    <div class="plato-info">
+                                        <span class="plato-nombre">Churrasco a la parrilla</span>
+                                        <span class="plato-desc">Tortillas, frijoles, chismol y chimichurri</span>
+                                    </div>
+                                    <span class="plato-precio">L. 220</span>
+                                </li>
+                                <li class="plato">
+                                    <div class="plato-info">
+                                        <span class="plato-nombre">Pollo a la brasa entero</span>
+                                        <span class="plato-desc">Marinado 12 horas, brasas de encino</span>
+                                    </div>
+                                    <span class="plato-precio">L. 180</span>
+                                </li>
+                                <li class="plato">
+                                    <div class="plato-info">
+                                        <span class="plato-nombre">Costillas BBQ</span>
+                                        <span class="plato-desc">Salsa ahumada de la casa, cocción lenta</span>
+                                    </div>
+                                    <span class="plato-precio">L. 195</span>
+                                </li>
+                                <li class="plato">
+                                    <div class="plato-info">
+                                        <span class="plato-nombre">Plato vegetariano de la casa</span>
+                                        <span class="plato-desc">Verduras de temporada a la parrilla</span>
+                                    </div>
+                                    <span class="plato-precio">L. 140</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="carta-categoria">
+                            <h3>Postres</h3>
+                            <ul>
+                                <li class="plato">
+                                    <div class="plato-info">
+                                        <span class="plato-nombre">Tres leches</span>
+                                        <span class="plato-desc">La receta de la abuela, bizcocho esponjoso</span>
+                                    </div>
+                                    <span class="plato-precio">L. 60</span>
+                                </li>
+                                <li class="plato">
+                                    <div class="plato-info">
+                                        <span class="plato-nombre">Flan de coco</span>
+                                        <span class="plato-desc">Coco fresco, caramelo dorado</span>
+                                    </div>
+                                    <span class="plato-precio">L. 55</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= CONTACTO / RESERVAS ================= -->
+            <section id="contacto" class="seccion">
+                <div class="contacto-grid">
+                    <div class="contacto-info">
+                        <p class="eyebrow">Reservas</p>
+                        <h2 class="titulo-seccion">Visítanos en el <em>corazón de Palmira</em></h2>
+                        <p class="contacto-texto">
+                            Déjanos tus datos y te confirmaremos tu mesa
+                            en menos de 24 horas.
+                        </p>
+
+                        <address class="direccion">
+                            <p>
+                                <strong>Dirección</strong><br>
+                                Colonia Palmira, Av. República de Chile,
+                                casa #1542, Tegucigalpa
+                            </p>
+                            <p>
+                                <strong>Horario</strong><br>
+                                Lunes a Sábado · 11:00 AM – 9:00 PM<br>
+                                Domingo · 12:00 PM – 6:00 PM
+                            </p>
+                        </address>
+                    </div>
+
+                    <form class="formulario" method="post">
+                        <fieldset>
+                            <legend>Información de contacto</legend>
+
+                            <div class="form-fila">
+                                <div class="form-grupo">
+                                    <label for="name">Nombre completo</label>
+                                    <input type="text" id="name" name="nombre" required>
+                                </div>
+                                <div class="form-grupo">
+                                    <label for="email">Correo electrónico</label>
+                                    <input type="email" id="email" name="email">
+                                </div>
+                            </div>
+
+                            <div class="form-grupo">
+                                <label for="tel">Teléfono</label>
+                                <input type="tel" id="tel" name="tel">
+                            </div>
+                        </fieldset>
+
+                        <div class="form-grupo">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntanos sobre tu reservación..." required></textarea>
+                        </div>
+
+                        <fieldset>
+                            <legend>Motivo de contacto</legend>
+                            <div class="form-botonera">
+                                <div class="form-grupo">
+                                    <select name="opcion" id="motivo" required>
+                                        <option value="" disabled selected>Elige una opción</option>
+                                        <option value="reservacion">Reservación</option>
+                                        <option value="pregunta">Pregunta</option>
+                                        <option value="evento_privado">Evento privado</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn btn-oro" id="boton">Enviar reservación</button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
             </section>
         </main>
 
-        <footer>
-            <div class="footer">
-               <div class="copyright">
-                    <p>&copy; 2026 La Brasa Dorada. Todos los derechos reservados.</p>
-               </div> 
-               <div class="redes_sociales">
-                    <ul>
-                        <li><a href="#">Facebook</a></li>
-                        <li><a href="#">Instagram</a></li>
-                    </ul>
-               </div>               
+        <!-- ================= FOOTER ================= -->
+        <footer class="footer">
+            <div class="footer-inner">
+                <p class="footer-marca">La Brasa <em>Dorada</em></p>
+                <p class="footer-texto">Fuego de leña desde 2011 · Tegucigalpa, Honduras</p>
+                <ul class="redes">
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
             </div>
+            <p class="copyright">© 2026 La Brasa Dorada. Todos los derechos reservados.</p>
         </footer>
 
-       <!-- <script src="script.js" defer></script> -->
-        <script src="script2.js" defer></script>
+        <script src="interactividad.js" defer></script>
     </body>
 </html>

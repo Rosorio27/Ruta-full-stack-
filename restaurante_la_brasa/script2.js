@@ -1,84 +1,89 @@
-
-const conteoImagenes = document.querySelectorAll("img"); 
+const conteoImagenes = document.querySelectorAll("img");
 console.log(conteoImagenes.length);
 
-const h2_galeria = document.querySelector("#galeria h2"); 
-h2_galeria.textContent = "Galeria de fotos"; 
+const tituloEspecialidades = document.querySelector("#especialidades .titulo-seccion");
+if (tituloEspecialidades) {
+    tituloEspecialidades.textContent = "Galería de fotos";
+}
 
-const enlaces = document.querySelectorAll("nav a"); 
+const enlaces = document.querySelectorAll("nav a");
 
-enlaces.forEach((enlace)=>{
-   console.log(enlace.textContent); 
-}); 
+enlaces.forEach((enlace) => {
+    console.log(enlace.textContent);
+});
 
+const categoriasCarta = document.querySelectorAll(".carta-categoria");
+const terceraCategoria = categoriasCarta[2];
+if (terceraCategoria) {
+    const cuantosli = terceraCategoria.querySelectorAll("li");
+    console.log(cuantosli.length);
+}
 
-const licategorias =document.querySelector(".categoria:nth-child(3)");
-const cuantosli = licategorias.querySelectorAll("li");
-console.log(cuantosli.length); 
-
-
-const paraFooter = document.querySelector(".footer");
-const nuevoDiv = document.createElement("div"); 
+const paraFooter = document.querySelector(".footer-inner");
+const nuevoDiv = document.createElement("div");
 
 nuevoDiv.innerHTML = `
-<p> Siguenos en redes </p>
-`; 
+    <p class="footer-apuntes"> Síguenos en redes </p>
+`;
 
-paraFooter.appendChild(nuevoDiv);
+if (paraFooter) {
+    paraFooter.appendChild(nuevoDiv);
+}
 
 const arregloEntradas = [
-   {nombre: "Comida rapida", precio: 4},
-   {nombre: "Comida china", precio: 50}
-]; 
+    { nombre: "Comida rápida", precio: 4 },
+    { nombre: "Comida china", precio: 50 }
+];
 
-const entradas = document.querySelector("#menu .categoria:first-child");
-const ulentrada= entradas.querySelector("ul")
-console.log(entradas); 
+const entradas = document.querySelector("#menu .carta-categoria");
+const ulentrada = entradas ? entradas.querySelector("ul") : null;
+console.log(entradas);
 console.log(ulentrada);
 
-arregloEntradas.forEach((nuevoli) =>{
+if (ulentrada) {
+    arregloEntradas.forEach((nuevoli, indice) => {
+        const li = document.createElement("li");
+        li.className = "plato";
+        li.innerHTML = `
+            <div class="plato-info">
+                <span class="plato-nombre">${nuevoli.nombre}</span>
+                <span class="plato-desc">Agregado por el script</span>
+            </div>
+            <span class="plato-precio">L. ${nuevoli.precio}</span>
+        `;
+        ulentrada.appendChild(li);
+    });
+}
 
-   const nuevoul = document.createElement("li"); 
-   nuevoul.textContent = `${nuevoli.nombre} - ${nuevoli.precio}`;
+const tituloHeader = document.querySelector(".hero-titulo");
+console.log(tituloHeader);
 
-   ulentrada.appendChild(nuevoul);
-
-}); 
-
-const tituloHeader = document.querySelector("header h1");
-   console.log(tituloHeader);
-
-tituloHeader.addEventListener("click", () =>{
-
-   tituloHeader.textContent= "!Bienvenidos!";
-
-});
+if (tituloHeader) {
+    tituloHeader.addEventListener("click", () => {
+        tituloHeader.textContent = "¡Bienvenidos!";
+    });
+}
 
 const footerResaltado = document.querySelector("footer");
 console.log(footerResaltado);
 
-footerResaltado.addEventListener("click", ()=>{
+footerResaltado.addEventListener("click", () => {
+    footerResaltado.classList.add("resaltado");
+});
 
-   footerResaltado.classList.add("resaltado"); 
-
-}); 
-
-
-//localStorage.setItem("nombre","ramon"); 
-console.log(localStorage.getItem("nombre")); 
+//localStorage.setItem("nombre","ramon");
+console.log(localStorage.getItem("nombre"));
 
 const listado = [
-   {nombre: "tarea1", estado: "activo"},
-   {nombre: "tarea2", estado: "desactivo"},
-   {nombre: "tarea3", estado: "activo"}
-]
+    { nombre: "tarea1", estado: "activo" },
+    { nombre: "tarea2", estado: "desactivo" },
+    { nombre: "tarea3", estado: "activo" }
+];
 
+if (localStorage.getItem("listado") === null) {
+    localStorage.setItem("listado", JSON.stringify(listado));
+}
+console.log(listado);
 
-if (localStorage.getItem("listado") === null){
-  localStorage.setItem("listado", JSON.stringify(listado));
-} 
-console.log(listado);  
-
-const arraylistado =  JSON.parse(localStorage.getItem("listado")); 
-
-console.log(arraylistado);  
+const arraylistado = JSON.parse(localStorage.getItem("listado"));
+console.log(arraylistado);
