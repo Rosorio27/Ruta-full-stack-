@@ -55,10 +55,6 @@ const empleados = [
   { nombre: "Luis", salario: 18000 }
 ];
 
-const sueldo = empleados.salario; 
-console.log(sueldo); 
-
-
 empleados.forEach((empleado) => {
     console.log(`${empleado.nombre} = ${empleado.salario}`);
 }); 
@@ -67,3 +63,82 @@ empleados.forEach((empleado) => {
 empleados.forEach(({nombre, salario}) => {
     console.log(`${nombre} - ${salario}`);
 });  
+
+const gastosEnero = [100, 200];
+const gastosFebrero = [300, 400];
+
+const union = gastosEnero.concat(gastosFebrero);
+
+console.log(union);
+
+const unionSpread = [...gastosEnero, ...gastosFebrero];
+
+console.log(unionSpread);
+
+const gastoOriginal = { nombre: "Alquiler", monto: 1000 };
+console.log(gastoOriginal);
+
+const gastoActualizado = { ...gastoOriginal, monto: 1200}; 
+console.log(gastoActualizado);
+
+
+const sumarGastos = (...numeros) => {
+    return numeros.reduce((acum, numeroActual)  => acum + numeroActual, 0 ); 
+};
+
+console.log(sumarGastos(30,60,90,50)); 
+
+const producto1 = { nombre: "Laptop", precio: 15000, marca: "Dell", stock: 5 };
+
+const {nombreProducto, ...resto} = producto1
+
+console.log(nombreProducto);
+console.log(resto); 
+
+
+
+const producto2= { nombrePro: "Laptop", precio: 15000, marca: "Dell", stock: 5 };
+
+const {nombrePro, ...restoinfo} = producto2; 
+
+console.log(nombrePro, restoinfo); 
+
+
+function crearContador (){
+
+  let contador = 0; 
+
+  return function () {
+    contador += 1;
+    console.log(contador); 
+  }; 
+}; 
+
+
+const miContador = crearContador();
+
+miContador();
+miContador();
+miContador();
+
+
+const otroContador = crearContador();
+otroContador();
+
+
+function validacion (clave){
+
+   return function(intento){
+      if (intento === clave){
+        console.log(`Acceso concesido`)
+      }else{
+        console.log(`Acceso denegado`); 
+      }
+  }; 
+}; 
+
+
+const validarClave = validacion("1234");
+
+validarClave("1234");
+validarClave("0000");

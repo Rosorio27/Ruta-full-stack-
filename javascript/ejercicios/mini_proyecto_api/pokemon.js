@@ -39,18 +39,3 @@ boton.addEventListener("click", async () =>{
 });
  
 
-
-const producto = {nombre: "Laptop", precio: 15000, marca: "Dell"}; 
-const {marca: fabricante} = producto;
-
-const {nombre, precio} = producto;
- 
-console.log(fabricante); 
-console.log(`nombre: ${nombre}, precio: ${precio}`); 
-
-
-const colores = ["rojo", "verde", "azul", "amarillo"];
-
-const  [primero, ,segundo] = colores; 
-
-console.log(primero,segundo); 
