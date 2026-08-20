@@ -26,16 +26,17 @@ boton.addEventListener("click", async () =>{
     console.log(respuesta); 
 
     if (respuesta){
+        
     nuevoElemento.innerHTML = `
         <h2>${respuesta.name}</h2>
         <p>${respuesta.height}</p>
         <img src="${respuesta.sprites.front_default}" alt="Imagen de ${respuesta.name}"> 
-    `; 
+    `;
+
     }else{
 
         console.log("No se obtuvo respuesta del servidor"); 
     }
-
 });
  
 

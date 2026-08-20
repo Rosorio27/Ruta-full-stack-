@@ -3,151 +3,171 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Penguin-Business-Solutions</title>
-        <meta name="description" content="">
+        <title>Penguin Business Solutions - Agencia de Marketing Digital</title>
+        <meta name="description" content="Penguin Business Solutions es una agencia de marketing digital que ayuda a emprendedores y PYMES a alcanzar su mercado meta. Ofrecemos servicios de identidad de marca, gestión de redes sociales y crecimiento digital.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <meta name="keywords" content="marketing digital, agencia de marketing, identidad de marca, redes sociales, SEO, PYMES, emprendedores, Honduras">
+        <meta name="author" content="Penguin Business Solutions">
+        <meta property="og:title" content="Penguin Business Solutions - Agencia de Marketing Digital">
+        <meta property="og:description" content="Penguin Business Solutions es una agencia de marketing digital que ayuda a emprendedores y PYMES a alcanzar su mercado meta. Ofrecemos servicios de identidad de marca, gestión de redes sociales y crecimiento digital.">
+        <meta property="og:image" content="assets/imagenes/Logo.jpeg"> <!-- Asegúrate de que esta ruta sea accesible públicamente -->
+        <meta property="og:url" content="URL_DE_TU_SITIO_WEB"> <!-- Reemplaza con la URL real de tu sitio -->
+        <meta name="twitter:card" content="summary_large_image">
+        <link rel="canonical" href="URL_DE_TU_SITIO_WEB"> <!-- Reemplaza con la URL real de tu sitio -->
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>
-       
         <header>
-            <a href="#">
+            <a href="#" aria-label="Página de inicio" class="logo-container">
                 <img src="assets/imagenes/Penguin_logo.svg" alt="Logo Penguin Business Solutions">
             </a>
 
-            <nav>
-                <ul>
-                    <li><a href="#sobre_nosotros">Quienes somos</a></li>
-                    <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#portafolio">Portafolio</a></li>
-                    <li><a href="#testimonios">Testimonios</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </nav>
+            <div class="header-content">
+                <nav id="main-navigation" aria-label="Navegación principal">
+                    <ul>
+                        <li><a href="#sobre_nosotros">Quiénes somos</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#portafolio">Portafolio</a></li>
+                        <li><a href="#testimonios">Testimonios</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="svg-container">
+                    <svg viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg">
+                        <text x="50%" y="50%" text-anchor="middle" fill="#585857" font-family="Montserrat" font-weight="600" font-size="20">Penguin Agency</text>
+                    </svg>
+                </div>
+            </div>
+            
+            <button class="menu-toggle" aria-expanded="false" aria-controls="main-navigation" aria-label="Abrir menú de navegación">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
         </header>
 
         <main>
             <section id="hero">
-                
                 <div class="hero_texto">
-                    <span class="hero_etiqueta">Agencia de Marketing Digital</span>
-                    <h1>Penguin Business Solutions</h1>
+                    <p class="hero_etiqueta">Agencia de Marketing Digital</p>
+                    <h1>Tu marca, <span>sin excusas.</span></h1>
                     <h2>Ayudamos a emprendedores, pequeña y mediana empresa a llegar a su mercado meta</h2>
-                    <a href="https://wa.me/50488961419" target="_blank" rel="noopener noreferrer" class="cta-hero"> Hablemos</a>
+                    
+                    <a href="https://wa.me/50488961419" target="_blank" rel="noopener noreferrer" class="cta-hero"> 
+                        Hablemos <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
 
-               <div class="imagen_fondo">
-                <img src="assets/imagenes/fondo1_hero.png" alt="">
-               </div> 
             </section>
                 
-            <h2 class="titulo_sobreNosotros">Sobre nosotros</h2>
-            <section id="sobre_nosotros">
+            <section id="sobre_nosotros" aria-labelledby="titulo-sobre-nosotros">
+                <h2 id="titulo-sobre-nosotros" class="titulo_sobreNosotros">Sobre nosotros</h2>
                 <div class="conteiner_sobreNosotros">
                     
-                    <div class="perfil1">
-                        <h3> Gabriela Vallecillo</h3>
+                    <article class="perfil1" aria-labelledby="gabriela-vallecillo-titulo">
+                        <h3 id="gabriela-vallecillo-titulo"> Gabriela Vallecillo</h3>
                         <div class="overlay">
-                              <img src="assets/imagenes/img_sobrenosotros.jpeg" alt="imagen del gerente">
+                              <img src="assets/imagenes/img_sobrenosotros.jpeg" alt="Retrato de Gabriela Vallecillo, co-propietaria de Penguin Business Solutions" loading="lazy">
                               <div class="overlay-texto"></div>
                         </div>
                          
-                     
-                       <h3>Co-owner</h3>
+                       <h4>Co-owner</h4>
                         <p>
                             Penguin nació con el propósito de romper el hielo en un mercado saturado de ideas repetitivas, buscando ayudar a las marcas a moverse con agilidad y destacar con frescura. Comenzamos como un pequeño equipo de mentes estratégicas y hoy existimos para transformar conceptos fríos y distantes en conexiones genuinas y memorables. Entendimos que para sobrevivir en el entorno digital de hoy, las empresas necesitan adaptarse rápido,
                              y nosotros decidimos convertirnos en el aliado perfecto para guiar ese viaje
                         </p> 
-                    </div>
+                    </article>
                     
-                    <div class="perfil2">
-                        <h3>Ramon Osorio</h3> 
+                    <article class="perfil2" aria-labelledby="ramon-osorio-titulo">
+                        <h3 id="ramon-osorio-titulo">Ramon Osorio</h3> 
                         <div class="overlay">
-                             <img src="assets/imagenes/perfil2.jpeg" alt="imagen del gerente">
+                             <img src="assets/imagenes/perfil2.jpeg" alt="Retrato de Ramon Osorio, co-propietario de Penguin Business Solutions" loading="lazy">
                             <div class="overlay-texto"></div>
                         </div>                   
                       
-                              <h3>Co-owner</h3>
+                        <h4>Co-owner</h4>
                         <p>
                             Penguin nació con el propósito de romper el hielo en un mercado saturado de ideas repetitivas, buscando ayudar a las marcas a moverse con agilidad y destacar con frescura. Comenzamos como un pequeño equipo de mentes estratégicas y hoy existimos para transformar conceptos fríos y distantes en conexiones genuinas y memorables. Entendimos que para sobrevivir en el entorno digital de hoy, las empresas necesitan adaptarse rápido,
                              Posotros decidimos convertirnos en el aliado perfecto para guiar ese viaje
                         </p>
-                    </div>
+                    </article>
                 </div>
             </section>
 
-            <section id="servicios">
-                <h2>Nuestros servicios</h2>
+            <section id="servicios" aria-labelledby="servicios-titulo">
+                <h2 id="servicios-titulo">Nuestros servicios</h2>
 
                 <div class="contenedor_servicios">
-                    <div class="tarjeta">
+                    <article class="tarjeta" aria-labelledby="identidad-marca-titulo">
                         <div class="tarjeta_frente">
-                            <img src="assets/imagenes/identidad_de_marca.jpg" alt="Identidad de marca">
-                            <h3>Identidad de marca</h3>
+                            <img src="assets/imagenes/identidad_de_marca.jpg" alt="Diseño de identidad de marca" loading="lazy">
+                            <h3 id="identidad-marca-titulo">Identidad de marca</h3>
                         </div>
 
                         <div class="tarjeta_reverso">
                             <p>Creación de logo, manual de marca e identidad visual para tu negocio.</p>
                         </div>
-                    </div>
+                    </article>
               
-                    <div class="tarjeta">
+                    <article class="tarjeta" aria-labelledby="gestion-redes-titulo">
                         <div class="tarjeta_frente">
-                            <img src="assets/imagenes/redes_sociales.jpg" alt="Gestion de redes sociales">
-                            <h3>Gestión de redes</h3>
+                            <img src="assets/imagenes/redes_sociales.jpg" alt="Gestión de redes sociales" loading="lazy">
+                            <h3 id="gestion-redes-titulo">Gestión de redes</h3>
                         </div>
                         <div class="tarjeta_reverso">
                             <p>Community management, creación de contenido y pauta en Meta.</p>
                         </div>    
-                    </div>
+                    </article>
               
-                    <div class="tarjeta">
+                    <article class="tarjeta" aria-labelledby="crecimiento-digital-titulo">
                         <div class="tarjeta_frente">
-                            <img src="assets/imagenes/creacion_digital.jpg" alt="Creacion digital">
-                            <h3>Crecimiento digital</h3>
+                            <img src="assets/imagenes/creacion_digital.jpg" alt="Crecimiento digital" loading="lazy">
+                            <h3 id="crecimiento-digital-titulo">Crecimiento digital</h3>
                         </div>
                         <div class="tarjeta-reverso">
                              <p>SEO en redes sociales y posicionamiento en la red.</p>
                         </div>
-                    </div>
+                    </article>
                 </div>
-              
             </section>
 
             <section id="portafolio">
-                <div>
-                    <h2>Marcas que confían en nosotros</h2>
-                </div><br>
-                 
-    
-                <ul class="lista_marcas">
-                    <li>
-                        <a href="#" class="marca_link">
-                            <img src="assets/imagenes/creacion_digital.jpg" alt="Nombre de la marca">
-                        </a>
-                    </li>
-        
-                    <li>
-                        <a href="#" class="marca_link">
-                            <img src="assets/imagenes/identidad_de_marca.jpg" alt="Nombre de la marca">
-                        </a>
-                    </li>
-                    <!-- más marcas -->
-                </ul>
+            <section id="portafolio" aria-labelledby="portafolio-titulo">
+                <h2 id="portafolio-titulo">Clientes que confían en nosotros</h2>
+                <div class="contenedor_imagenes">
+                    <figure class="img_bloque">   
+                        <img src="assets/imagenes/identidad_de_marca.jpg" alt="Proyecto 1 de identidad de marca" loading="lazy">
+                        <figcaption><h3>Proyecto1</h3></figcaption>
+                    </figure>
+                    <figure class="img_bloque">
+                        <img src="assets/imagenes/identidad_de_marca.jpg" alt="Proyecto 2 de identidad de marca" loading="lazy">
+                        <figcaption><h3>Proyecto2</h3></figcaption>
+                    </figure>
+                    <figure class="img_bloque">
+                        <img src="assets/imagenes/identidad_de_marca.jpg" alt="Proyecto 3 de identidad de marca" loading="lazy">
+                        <figcaption><h3>Proyecto3</h3></figcaption>
+                    </figure>
+                    <figure class="img_bloque">
+                        <img src="assets/imagenes/identidad_de_marca.jpg" alt="Proyecto 4 de identidad de marca" loading="lazy">
+                        <figcaption><h3>Proyecto4</h3></figcaption>
+                    </figure>
+                </div>
             </section>
 
-            <section id="testimonios">
-                <h2 class="encabezado_testimonio">Testimonios</h2>
-
+            <section id="testimonios" aria-labelledby="testimonios-titulo">
+                <h2 id="testimonios-titulo" class="encabezado_testimonio">Testimonios</h2>
                 <div class="contenedor_testiminios">
                          <figure class="testimonio">
                          <blockquote>
-                            <span class="estrellas">⋆ ⋆ ⋆ ⋆ ⋆</span>
-                           <span class="mensaje_testimonio"><p>"El servicio fue excepcional y superó todas mis expectativas. Recomiendo ampliamente su plataforma."</p></span> 
+                            <span class="estrellas" aria-label="5 estrellas">⋆ ⋆ ⋆ ⋆ ⋆</span>
+                           <p class="mensaje_testimonio">"El servicio fue excepcional y superó todas mis expectativas. Recomiendo ampliamente su plataforma."</p> 
                         </blockquote>
                         <figcaption class="pie_de_imagen">
                          - María Gómez, <strong>CEO en TechSolutions</strong>
@@ -156,8 +176,8 @@
                    
                     <figure class="testimonio">
                          <blockquote>
-                            <span class="estrellas">⋆ ⋆ ⋆ ⋆ ⋆</span>
-                            <span class="mensaje_testimonio"><p>"El servicio fue excepcional y superó todas mis expectativas. Recomiendo ampliamente su plataforma."</p></span> 
+                            <span class="estrellas" aria-label="5 estrellas">⋆ ⋆ ⋆ ⋆ ⋆</span>
+                            <p class="mensaje_testimonio">"El servicio fue excepcional y superó todas mis expectativas. Recomiendo ampliamente su plataforma."</p> 
                         </blockquote>
                     <figcaption class="pie_de_imagen">
                          - María Gómez, <strong>CEO en TechSolutions</strong>
@@ -166,44 +186,44 @@
 
                     <figure class="testimonio">
                          <blockquote>
-                            <span class="estrellas">⋆ ⋆ ⋆ ⋆ ⋆</span>
-                           <span class="mensaje_testimonio"><p>"El servicio fue excepcional y superó todas mis expectativas. Recomiendo ampliamente su plataforma."</p></span> 
+                            <span class="estrellas" aria-label="5 estrellas">⋆ ⋆ ⋆ ⋆ ⋆</span>
+                           <p class="mensaje_testimonio">"El servicio fue excepcional y superó todas mis expectativas. Recomiendo ampliamente su plataforma."</p> 
                         </blockquote>
                     <figcaption class="pie_de_imagen">
                          - María Gómez, <strong>CEO en TechSolutions</strong>
                     </figcaption>
                     </figure>
                 </div>
-     
             </section>
 
-            <section id="contacto">
-                <span class="encabezado_formulario"><h2>Contacto</h2></span>
-                        <form method="post">
+            <section id="contacto" aria-labelledby="contacto-titulo">
+                <h2 id="contacto-titulo" class="encabezado_formulario">Contacto</h2>
+
+                        <form method="post" aria-label="Formulario de contacto">
                         <div class="contenedor_formulario">
                             <div class="columna_formulario">
                                 <div class="campos">
                                     <label for="name">Nombre completo</label>
-                                    <input type="text" id="name" name="nombre" required/>
+                                    <input type="text" id="name" name="nombre" required aria-required="true"/>
                                 </div>
                             
                                 <div class="campos">
-                                    <label for="email">Correo electronico</label>
-                                    <input type="email" id="email" name="email">
+                                    <label for="email">Correo electrónico</label>
+                                    <input type="email" id="email" name="email" aria-required="true">
                                 </div>
                             
                                 <div class="campos">
-                                     <label for="tel">Telefono</label>
+                                     <label for="tel">Teléfono</label>
                                     <input type="tel" id="tel" name="tel">
                                 </div>
                             
                                 <div class="campos">
-                                    <label for="servicio">Selecciona servicio de tu interes </label>
+                                    <label for="servicio">Selecciona servicio de tu interés </label>
                                     <select name="servicio" id="servicio">
-                                        <option value="" disabled></option>
+                                        <option value="" disabled selected>Selecciona un servicio</option>
                                         <option value="identidad_marca">Identidad de marca</option>
-                                        <option value="redes_sociales">Gestion de redes sociales</option>
-                                        <option value="creacion_digital">Creacion digital</option>
+                                        <option value="redes_sociales">Gestión de redes sociales</option>
+                                        <option value="creacion_digital">Creación digital</option>
                                     </select>
                                 </div>
 
@@ -220,8 +240,8 @@
                                         Hablemos por WhatsApp
                                     </a>
                                     <address>
-                                        <p><i class="fa-solid fa-envelope"></i> gabrielamvallecillo@gmail.com</p>
-                                        <p><i class="fa-solid fa-phone"></i> +504 8896-1419</p>
+                                        <p><i class="fa-solid fa-envelope"></i> <a href="mailto:gabrielamvallecillo@gmail.com">gabrielamvallecillo@gmail.com</a></p>
+                                        <p><i class="fa-solid fa-phone"></i> <a href="tel:+50488961419">+504 8896-1419</a></p>
                                     </address>
                                </div>
                                 
@@ -231,6 +251,8 @@
                         </div>
                         </form>
             </section>
+
+           <script defer src="funciones.js"></script>
         </main>
 
         <footer>

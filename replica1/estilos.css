@@ -1,0 +1,123 @@
+
+/* CSS Reset */
+body, header, main, footer, div, ul, li, a, h1, h2, p {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+#banner{
+    background-image: url('imagenes/mobileImage.jpeg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+a.payment::before{
+    content: "";
+    background-image: url(imagenes/icon-loan-payment.webp);
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+a.appointment::before {
+    content: "";
+    background-image: url(imagenes/icon-scheduled-appt.png);
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+a.resources::before {
+    content: "";
+    background-image: url(imagenes/icon-financial-resources.png);
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+a.carrer::before {
+    content: "";
+    background-image: url(imagenes/icon-career-opps.png);
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.contendor-buscador {
+    background-color: #002f45;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    margin: 0;
+    height: 80px;
+}
+
+.contendor-buscador ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.contendor-buscador a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+form{
+    border: red 1px solid; 
+    width: 250px;
+    height: 50px;
+}
+
+#caja-busqueda{
+    width: 250px;
+    height: 50px;
+    border-radius: 40px / 20px;
+}
+
+#caja-busqueda::placeholder{
+    background-color: #043d55;
+    border-radius: 20px;
+    color: #fff;
+    background-color: #043d55;
+    border: 2px solid #145a78;
+    height: 150px;
+}
+
+#formulario_buscardor{
+    height: auto;
+    width: 150px;
+}

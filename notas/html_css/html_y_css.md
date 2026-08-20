@@ -24,6 +24,83 @@
 
     Decide quien gana cuando hay el mismo selector, escrito mas de una vez con l amismas especificidad 
 
+## Selectores
+
+    -etiqueta HTML
+    -clase (.clase)
+        -multiples clases 
+    -selector por ID (#id)
+    -selector universal (*) = * { font-weight: bold};
+    -Pseudoclases:
+
+        -a:link
+        -a:visited
+        -a:hover
+        -a:active
+
+    -   :before (agrega antes del contenido real)
+    -   :after  (agrega despues del contenido real)
+    
+    -selector por atributo: 
+
+        img[tittle] {
+            border: 2px solid black; 
+        }
+
+    -selector por valor exacto: 
+
+        input[type="text"] {
+            border: 1px solid gray;
+        }
+    
+    -selector que empieza con: 
+
+        a[href^="http://"] {
+            color: green;
+        }
+
+    -selector que termina con: 
+
+        a[href$=".pdf"] {
+            background: url(icono-pdf.png) no-repeat;
+            padding-left: 20px;
+        }
+    
+    -selector que contiene: 
+
+        img[src*="headshot"] {
+            border: 3px solid green;
+        }
+
+    - selector hijo directo > :
+
+        body > h1 {
+            color: red;
+        }
+
+    - :first-child — selecciona el primer hijo de su padre
+
+        li:first-child {
+            font-weight: bold;
+        }
+    
+    - :last-child — el último hijo
+
+        li:last-child {
+            color: red; 
+        }
+
+    - :nth-child() : mediante patron especifico construye la regla 
+
+    -Selector de hermano adyacente (+)
+
+        h2 + p {
+            margin-top: 0;
+            font-style: italic;
+        }
+
+    
+
 ### Model box 
 
     Todo elemento html es en el fondo una caja rectangular compuesta por 4 capas de adentro hacia afuera 
