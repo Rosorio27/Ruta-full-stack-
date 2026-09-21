@@ -4,94 +4,296 @@
 
     Estructura semantica basica: header, nav, main, section, footer
 
-### Etiquetas html semanticas
+### Estructura semantica basica
 
-    **Header:** Es el contnedor de introduccion o navegacion de tu sitio. Suele llevar el logo, el memu principal o buscadores globales.
+- **Header:** Es el contenedor de introducción o navegación de tu sitio. Suele llevar el logo, el menú principal o buscadores globales.  
+- **nav:** Para menus de navegacion o enlaces. 
+- **main:** para el contenido principal unico   
+- **Section:** Define una sección temática autónoma dentro del documento. **Regla de oro**: debe llevar un `<h2-h6>` que explique de qué se trata. Si no se cumple esta regla no se debe usar un `div`,
+sino usar un `section`.
+- **article:** Para contenido independiente (servicios, posts)
+- **footer:** para info de contacto/copyright 
+
+### Atributos de Html
+- **atributos data-*** se usan para controlas junto con js los elementos html 
+- **Atributo loading: "lazy"**: Le dice al navegador que no descargue la imagen inmediatamente, sino que espere hasta que el usuario haga scroll y esté a punto de llegar a la zona donde se encuentra la imagen.
+
+### Etiqueta picture para responsive Images
+- **resoluciones:** 
+    - Móvil (Default): Todo lo que mida menos de 768px. 
+    - Tablet (md): Desde 768px hasta 1024px (cubre pantallas medianas y iPads).
+    - Escritorio (lg / xl): Desde 1024px en adelante (cubre laptops y monitores grandes).
+
+```html
+<picture>
+    <source media="(min-width: 1024px)" srcset="banner-desktop.webp">
+    <source media="(min-width: 768px)" srcset="banner-tablet.webp">
+    <img src="banner-mobile.webp" alt="Diseño simplificado para producción">
+</picture>
+```
+- **Usos** de la etiqueta picture para **responsive**: 
+    - Banners principales y fondos (Hero Images)
+    - Fotos de productos de E-commerce
+    - Logotipos o gráficos con texto integrado
     
-    **nav:** Para menus de navegacion o enlaces. 
-    
-    **main:** para el contenido principal unico 
-    
-    **seccion:** Define una seccion tematica autonoma dentro del documento. **regla de oro** debe llevar un <h2-h6> que explique de que se tratra, sino esta regla no se cumple usa un div no seccction 
+### Blockquote y Cite
+- **Blockquote**: Para representar citas textuales largas que provienen de otra fuente (como un libro, un autor, etc.).
+- **Cite**: Para atribuir la cita a su fuente original.
 
-    **article:** Para contenido independiente (servicios, posts)
+```html
+<blockquote>
+  Esta es una cita importante.
+  <footer>Cita de <cite>John Doe</cite></footer>
+</blockquote>
+```
 
-    **footer:** para info de contacto/copyright 
-    
-    **atributos data-* ** se usan para controlas junto con js los elementos html 
+### fORMULARIOS 
+- **Atributo `action` y `method`**:
+  - `Action`: Destino en el servidor (normalmente apunta a un archivo de backend).
+  - `Method`: Protocolo HTTP para transferir los datos (GET o POST).
 
-    **atributo loading: "lazy"**: le dice al navegador que no descargue la imagen inmediatamente, sino que espere hasta que el usuario haga scroll y esté a punto de llegar a la zona donde se encuentra la imagen.
+   ```html
+  <form action="/enviar-datos" method="POST">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre">
+    <button type="submit">Enviar</button>
+  </form>
+  ```
+- **Métodos de Formulario**:
+  - **GET**: Envía los datos agregándolos directamente a la URL (publico y visible, no recomendado para información sensible).
+  - **POST**: Envía los datos de forma "invisible" dentro del cuerpo de la petición HTTP (seguro y recomendado para información sensible).
 
-    **<picture>**: es un contenedor inteligente que permite mostrar diferentes versiones de una imagen según el tamaño de la pantalla, la resolución o el formato compatible del dispositivo Carga archivos ligeros solo cuando el equipo del usuario lo necesita.
+### Atributos de Formularios
+- **Fieldset**: Sirve para agrupar de forma lógica varios campos de entrada (`<input>`, `<select>`, `<textarea>`) que tienen relación entre sí.
+  - `disabled`: Bloquear todos los inputs que estén en su interior con un solo golpe.
 
-    resoluciones: 
+  ```html
+<fieldset disabled>
+  <legend>Información Personal</legend>
+  <label for="nombre">Nombre:</label>
+  <input type="text" id="nombre" name="nombre">
+</fieldset>
+```
 
-       -Móvil (Default): Todo lo que mida menos de 768px. Es la imagen base que se carga por defecto (siguiendo la filosofía Mobile-First).
-       -Tablet (md): Desde 768px hasta 1024px (cubre pantallas medianas y iPads).
-       -Escritorio (lg / xl): Desde 1024px en adelante (cubre laptops y monitores grandes).
+- **Legend**: Define el título o la etiqueta del grupo.
+```html
+<legend>Información Personal</legend>
+```
 
-        <!-- 1. Pantallas de computadora (Escritorio) -->
-        <source media="(min-width: 1024px)" srcset="banner-desktop.webp">
+- **Label e Input**: Trabajan de la mano: el `<input>` es el campo donde el usuario escribe o interactúa, y el `<label>` es el texto que explica qué información se está pidiendo.
+  - `for`: Utilizas el atributo `for` en el `<label>` y lo haces coincidir exactamente con el atributo `id` del `<input>`.
 
-        <!-- 2. Pantallas de tablet (Medianas) -->
-        <source media="(min-width: 768px)" srcset="banner-tablet.webp">
+```html
+<label for="nombre">Nombre:</label>
+<input type="text" id="nombre" name="nombre">
+```
+### Tipos de Input
+HTML ofrece una variedad de tipos de inputs que se pueden usar en formularios para recoger diferentes tipos de datos. Cada tipo de input tiene una funcionalidad específica y una apariencia predeterminada
+que facilita la interacción del usuario.
 
-        <!-- 3. Pantallas de celulares (Por defecto / Mobile-First) -->
-        <img src="banner-mobile.webp" alt="Diseño simplificado para producción">
+### 1. Text
+Sirve para recoger texto simple, como nombres, direcciones, descripciones, etc.
+```html
+<input type="text" id="nombre" name="nombre" placeholder="Nombre">
+```
 
-        usos: 
+### 2. Email
+Para recoger direcciones de correo electrónico.
+```html
+<input type="email" id="email" name="email" placeholder="Correo Electrónico">
+```
 
-            🖼️ Banners principales y fondos (Hero Images)
-            Fotos de productos de E-commerce
-            🎨 Logotipos o gráficos con texto integrado
-    
-    **<blockquete>**: para representar citas textuales largas que provienen de otra fuente (como un libro, un autor, un discurso o
-                        un sitio web externo). El atributo moderno: **cite** Para que tu código sea 100% profesional y limpio ante los ojos de Google (SEO), puedes usar el atributo cite dentro de la etiqueta para indicar la URL de donde sacaste la información
+### 3. Password
+Para recoger contraseñas de usuario.
+```html
+<input type="password" id="contrasena" name="contrasena" placeholder="Contraseña">
+```
 
-    **form:** son aquellos que se construyen utilizando únicamente las etiquetas, atributos y validaciones que el propio navegador web  
-            trae integrados de fábrica, sin depender de librerías externas de JavaScript
+### 4. Number
+Para recoger números, como edades, cantidades, etc. Incluye flechas de incremento y decremento.
+```html
+<input type="number" id="edad" name="edad" min="18" max="100">
+```
 
-    Tipos de input: 
+### 5. Tel
+Para recoger números de teléfono.
+```html
+<input type="tel" id="telefono" name="telefono" placeholder="Teléfono">
+```
 
-        1. type="email": Valida automáticamente que el texto tenga una estructura de correo (usuario@dominio.com)
-        2.type="tel": Abre el teclado numérico en celulares
-        3.type="date": Despliega un calendario nativo del sistema operativo (iOS, Android, Windows) para elegir fechas de forma cómoda.
-        4.type="number": Añade flechas para subir/bajar y restringe el texto a solo números
-        5.type="color": Abre la paleta de colores nativa del dispositivo
-        6.type="range": Crea una barra deslizable (slider) para elegir un rango numérico.
+### 6. Date
+Para seleccionar fechas. Muestra un calendario nativo en dispositivos móviles.
+```html
+<input type="date" id="fechaNacimiento" name="fechaNacimiento">
+```
 
-    Validaciones nativas: 
+### 7. Radio Button
+Para seleccionar una única opción de una lista.
+```html
+<input type="radio" id="hombre" name="sexo" value="hombre">
+<label for="hombre">Hombre</label>
+<input type="radio" id="mujer" name="sexo" value="mujer">
+<label for="mujer">Mujer</label>
+```
 
-        -required: Hace que el campo sea obligatorio. Si intentas enviar el formulario vacío, el navegador detiene el envío y muestra un mensaje de alerta flotante
-        -.minlength y maxlength: Controlan el mínimo y máximo de caracteres permitidos (ej. minlength="8" para contraseñas)
-        -.min y max: Controlan los valores numéricos mínimos y máximos (ej. para restringir que solo entren mayores de 18 años)
-        -.pattern: Permite usar Expresiones Regulares (RegEx) directamente en HTML para validar cosas complejas, como un formato de cédula o una contraseña que requiera mayúsculas y números.
+### 8. Checkbox
+Para seleccionar una o varias opciones de una lista.
+```html
+<input type="checkbox" id="terminos" name="terminos" value="acepto">
+<label for="terminos">Acepto los términos y condiciones</label>
+```
 
-    Atributo action y method: Trabajan juntos para definir a dónde se envían los datos del formulario y cómo se transportan a través de internet.
+### 9. File
+Para cargar archivos, como imágenes, documentos, etc.
+```html
+<input type="file" id="archivo" name="archivo" accept=".jpg,.png" multiple>
+```
 
-   **Action**: Destino en el servidor: Normalmente apunta a un archivo de backend (como /enviar-datos, procesar.php, api/v1/users, etc.)
-   **Method**:El atributo method define el protocolo HTTP que se utilizará para transferir los datos.
+### 10. Hidden
+Para ocultar un input que no se muestra al usuario, pero que se envía al servidor.
+```html
+<input type="hidden" id="usuarioId" name="usuarioId" value="12345">
+```
 
-        Método GET (Público y visible) Envía los datos agregándolos directamente al final de la URL de la barra de direcciones. se usa: Para búsquedas, filtros o consultas donde no se maneje información confidencial.
+### 11. Submit
+Para enviar el formulario.
+```html
+<button type="submit">Enviar</button>
+```
 
-        Método POST (Oculto y seguro) Envía los datos de forma "invisible" dentro del cuerpo de la petición HTTP (HTTP Request Body). Los datos no aparecen en la barra de direcciones de la URL. se usa: Para crear usuarios, iniciar sesión, enviar mensajes de contacto, subir archivos o procesar pagos
+### 12. Reset
+Para restablecer todos los inputs del formulario a sus valores iniciales.
+```html
+<button type="reset">Reiniciar</button>
+```
 
-    **Fieldset:** Sirve para agrupar de forma lógica varios campos de entrada (<input>, <select>, <textarea>) que tienen relación entre sí.
+### 13. Button
+Para ejecutar un evento de JavaScript.
+```html
+<button type="button" onclick="miFuncion()">Haz algo con JavaScript</button>
+```
 
-     Si le añades el atributo disabled al <fieldset> (así: <fieldset disabled>), bloquearás automáticamente todos los inputs que estén en su interior de un solo golpe, sin necesidad de desactivarlos uno por uno con JavaScript.
+### 14. Select
+Para crear una lista desplegable de opciones.
+```html
+<select id="pais" name="pais">
+  <option value="es">España</option>
+  <option value="us">Estados Unidos</option>
+  <option value="fr">Francia</option>
+</select>
+```
 
-    **legend**: Es la etiqueta que define el título o la etiqueta del grupo
+### 15. Textarea
+Para recoger texto largo o multi-linea.
+```html
+<textarea id="comentarios" name="comentarios" placeholder="Deja tus comentarios"></textarea>
+```
 
-    **label e input**: son la pareja más importante de cualquier formulario en la web. Trabajan de la mano: el <input> es el campo donde el usuario escribe o interactúa, y el <label> es el texto que explica qué información se está pidiendo
+### 16. Url
+Para recoger URLs.
+```html
+<input type="url" id="url" name="url" placeholder="URL">
+```
 
-        Relacionar input y label: Utilizas el atributo for en el <label> y lo haces coincidir exactamente con el atributo id del <input>.
+### 17. Color
+Para seleccionar un color.
+```html
+<input type="color" id="color" name="color" value="#ff0000">
+```
 
-        <label for="correo-usuario">Correo Electrónico:</label>
-        <input type="email" id="correo-usuario" name="email">
+### 18. Range
+Para seleccionar un valor dentro de un rango específico, como un deslizador.
+```html
+<input type="range" id="edad" name="edad" min="18" max="100">
+```
+### Validaciones basicas 
+1. **Required**
+   - **Descripción**: Especifica que el campo es requerido y no debe estar vacío.
+   - **Ejemplo**:
+     ```html
+     <input type="text" id="nombre" name="nombre" required>
+     ```
+
+2. **Pattern**
+   - **Descripción**: Permite especificar un patrón regex para validar el contenido del input.
+   - **Ejemplo**:
+     ```html
+     <input type="text" id="nombre" name="nombre" pattern="[a-zA-Z]{3,}" title="Debes escribir al menos 3 letras">
+     ```
+
+3. **Min** y **Max**
+   - **Descripción**: Establecen el rango de valores aceptables para los inputs de tipo `number`, `date`, etc.
+   - **Ejemplo**:
+     ```html
+     <input type="number" id="edad" name="edad" min="18" max="100">
+     ```
+
+4. **Minlength** y **Maxlength**
+   - **Descripción**: Establecen la longitud mínima y máxima de los caracteres que se pueden ingresar en el input.
+   - **Ejemplo**:
+     ```html
+     <input type="text" id="nombre" name="nombre" minlength="3" maxlength="50">
+     ```
+
+### Validaciones Específicas
+
+1. **Email**
+   - **Descripción**: Valida automáticamente que el texto tenga una estructura de correo electrónico (usuario@dominio).
+   - **Ejemplo**:
+     ```html
+     <input type="email" id="email" name="email" required>
+     ```
+
+2. **Url**
+   - **Descripción**: Valida automáticamente que el texto tenga una estructura de URL.
+   - **Ejemplo**:
+     ```html
+     <input type="url" id="url" name="url" required>
+     ```
+
+3. **Tel**
+   - **Descripción**: Valida automáticamente que el texto tenga una estructura de número de teléfono.
+   - **Ejemplo**:
+     ```html
+     <input type="tel" id="telefono" name="telefono" required>
+     ```
+
+4. **Number**
+   - **Descripción**: Permite especificar un valor mínimo y máximo para un input de tipo número.
+   - **Ejemplo**:
+     ```html
+     <input type="number" id="edad" name="edad" min="0" max="120">
+     ```
+
+- **Atributos de UX Nativa (autocomplete)**:
+  - `autocomplete`: Le dice al navegador qué tipo de dato va ahí para que sugiera rellenarlo con un solo clic usando los datos guardados del usuario.
+
+```html
+<label for="correo">Correo Electrónico:</label>
+<input type="email" id="correo" name="correo" autocomplete="email">
+```
+- **Autofocus**: Coloca el cursor automáticamente en ese campo de texto apenas se carga la página.
+
+```html
+<input type="text" id="nombre" name="nombre" autofocus>
+```
+son 
+- **Button**: Elemento nativo de HTML diseñado para que los usuarios realicen acciones en tu página web.
+  - `type="submit"`: Sirve para procesar y enviar todos los datos del formulario hacia la ruta especificada en el `action`.
+  - `type="button"`: Es un botón "neutro". No hace nada de forma nativa. Se utiliza exclusivamente para conectarle eventos de programación con JavaScript.
+  - `type="reset"`: Borra instantáneamente todo lo que el usuario haya escrito en los inputs del formulario, regresándolos a su estado original vacío.
+
+```html
+<button type="submit">Enviar</button>
+<button type="button" onclick="miFuncion()">Haz algo con JavaScript</button>
+<button type="reset">Reiniciar</button>
+```
 
 
 
-        
+
+
+
 ## css 
 
     Referenciar una hoja de estilo: 
