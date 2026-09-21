@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Clínica Dental</title>
+    <style>
+        body { margin: 0; font-family: Arial; }
+        .grande { font-size: 40px; font-weight: bold; }
+        .mediano { font-size: 28px; font-weight: bold; }
+        .normal { font-size: 16px; }
+        .boton {
+            background: blue;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+            display: inline-block;
+        }
+        .centrado { text-align: center; }
+        .servicios { display: flex; }
+        .servicio { width: 33%; padding: 20px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="menu" style="background: #333; padding: 15px;">
+            <img src="logo.png" width="150">
+            
+            <nav>
+                <a href="#" style="color: white; margin: 10px;">Inicio</a>
+                <a href="#" style="color: white; margin: 10px;">Servicios</a>
+                <a href="#" style="color: white; margin: 10px;">Contacto</a>
+            </nav>
+        </div>
+    </header>
+    
+    <nain>
+
+        <section>
+            <div class="centrado">
+                <div class="grande">Clínica Dental Sonrisa</div>
+                <div class="normal">Tu salud dental en manos expertas. Más de 15 años cuidando sonrisas en Tegucigalpa.</div>
+                <div class="boton" onclick="window.location='#contacto'">Agenda tu cita</div>
+            </div>
+        </section>
+   
+
+    <section>
+        <div class="centrado">
+        <div class="mediano">Nuestros Servicios</div>
+        <br>
+        <div class="servicios">
+            <div class="servicio">
+                <img src="limpieza.jpg" width="200">
+                <div class="mediano">Limpieza Dental</div>
+                <div class="normal">Limpieza profesional con ultrasonido. Elimina sarro y placa bacteriana.</div>
+                <br>
+                <div class="boton">Ver más</div>
+            </div>
+            <div class="servicio">
+                <img src="blanqueamiento.jpg" width="200">
+                <div class="mediano">Blanqueamiento</div>
+                <div class="normal">Blanqueamiento con luz LED. Resultados visibles desde la primera sesión.</div>
+                <br>
+                <div class="boton">Ver más</div>
+            </div>
+            <div class="servicio">
+                <img src="ortodoncia.jpg" width="200">
+                <div class="mediano">Ortodoncia</div>
+                <div class="normal">Brackets metálicos y estéticos. Planes de pago flexibles.</div>
+                <br>
+                <div class="boton">Ver más</div>
+            </div>
+        </div>
+    </div>
+
+    </section>
+    
+    <section>
+        <div class="centrado">
+            <div class="mediano">Lo que dicen nuestros pacientes</div>
+            <div class="normal">"Excelente atención, el Dr. Pérez es muy profesional."<br>- María López</div>
+
+        <div class="normal">"Me hicieron el blanqueamiento y quedé encantada."<br>- Carlos Ramírez</div>
+        <br>
+        <div class="normal">"Llevo a mis hijos aquí desde hace 5 años. Muy recomendados."<br>- Ana García</div>
+    </div>
+
+    </section>
+   
+
+    <br><br><br>
+
+    <section>
+
+        <div class="centrado" id="contacto">
+        <div class="mediano">Agenda tu cita</div>
+        <br>
+        <form>
+            <input type="text" placeholder="Nombre completo"><br><br>
+            <input type="email" placeholder="Correo electrónico"><br><br>
+            <input type="tel" placeholder="Teléfono"><br><br>
+            <select>
+                <option>Selecciona un servicio</option>
+                <option>Limpieza Dental</option>
+                <option>Blanqueamiento</option>
+                <option>Ortodoncia</option>
+                <option>Consulta General</option>
+            </select><br><br>
+            <textarea placeholder="Mensaje adicional" rows="4" cols="40"></textarea><br><br>
+            <input type="submit" value="Enviar" class="boton">
+        </form>
+    </div>
+    </section>
+    
+
+    </nain>
+
+    <footer>
+        <div style="background: #333; color: white; padding: 20px; text-align: center;">
+            <div class="normal">© 2026 Clínica Dental Sonrisa</div>
+            <div class="normal">Tegucigalpa, Honduras</div>
+            <div class="normal">Tel: 2222-3333</div>
+            <div class="normal">info@clinicasonrisa.com</div>
+            <div class="normal">Síguenos: Facebook | Instagram | WhatsApp</div>
+        </div>
+    </footer>
+   
+</body>
+</html>

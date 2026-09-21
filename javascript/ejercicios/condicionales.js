@@ -13,3 +13,4 @@ if (saldoRestante < 0 ){
     console.log(`Estas dentro del presupuesto tu presupuesto actual es: ${saldoRestante}`); 
 }
 
+const inputreto4 = document.querySelector("#")

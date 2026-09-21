@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Retos DOM y Eventos</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 0 20px;
+            background-color: #FAF3E7;
+            color: #3E2723;
+        }
+        h2 {
+            border-bottom: 2px solid #B33A1E;
+            padding-bottom: 6px;
+            margin-top: 50px;
+        }
+
+        .producto {
+            background-color: white;
+            padding: 12px;
+            margin-bottom: 8px;
+            border-radius: 6px;
+            transition: background-color 0.2s;
+        }
+
+        .producto.resaltado {
+            background-color: #D4A017;
+        }
+
+        .estrella {
+            font-size: 2rem;
+            cursor: pointer;
+            color: #ccc;
+        }
+
+        .estrella.activa {
+            color: gold;
+        }
+
+        .tab-boton.activo {
+             background-color: #B33A1E;
+            color: white;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Retos DOM y Eventos</h1>
+
+    <!-- RETO D: Hover simple -->
+    <h2>Reto D: Hover en productos</h2>
+    <div id="listaProductosHover">
+        <div class="producto" data-precio="150">Camisa - $150</div>
+        <div class="producto" data-precio="300">Pantalón - $300</div>
+        <div class="producto" data-precio="450">Zapatos - $450</div>
+    </div>
+
+    <h2>Reto A: Calificación con estrellas</h2>
+    <div id="estrellas">
+        <span class="estrella" data-valor="1">★</span>
+        <span class="estrella" data-valor="2">★</span>
+        <span class="estrella" data-valor="3">★</span>
+        <span class="estrella" data-valor="4">★</span>
+        <span class="estrella" data-valor="5">★</span>
+    </div>
+    
+    <p id="calificacionActual">Calificación: 0</p>
+
+    <h2>Reto B: Tabs de navegación</h2>
+    <div id="botonesTab">
+        <button class="tab-boton" data-tab="info">Información</button>
+        <button class="tab-boton" data-tab="specs">Especificaciones</button>
+        <button class="tab-boton" data-tab="reviews">Reseñas</button>
+    </div>
+
+    <div class="tab-contenido" id="info">
+        Contenido de información del producto.
+    </div>
+    
+    <div class="tab-contenido" id="specs" style="display: none;">
+        Peso: 2kg, Color: negro.
+    </div>
+
+    <div class="tab-contenido" id="reviews" style="display: none;">
+        "Excelente producto" - Cliente satisfecho.
+    </div>
+
+    <h2>Reto C: Formulario con validación combinada</h2>
+    <input type="text" id="nombreCheckout" placeholder="Nombre completo">
+    <input type="email" id="emailCheckout" placeholder="Email">
+    <input type="tel" id="telefonoCheckout" placeholder="Teléfono (8 dígitos)">
+    <button id="botonComprar" disabled>Comprar</button>
+
+    <script src="retos-dom.js" defer></script>
+</body>
+</html>

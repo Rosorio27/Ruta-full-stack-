@@ -41,6 +41,7 @@
     </style>
 </head>
 <body>
+
     <h1>Buscador de Pokémon</h1>
 
     <div class="buscador">
@@ -49,8 +50,68 @@
     </div>
 
     <div id="resultado">
-        <!-- Acá se va a insertar la info del pokémon con JS -->
+    
     </div>
+
+    
+        <hr>
+        <h2>Reto 1: Validación en vivo</h2>
+        <input type="text" id="inputValidacion" placeholder="Escribe algo...">
+        <p id="mensajeValidacion"></p>
+
+  <div>
+    <h2>Reto 2: Contador de caracteres</h2>
+    <textarea id="textareaContador" maxlength="100" rows="4" cols="40"></textarea>
+    <p id="contadorRestante"></p>
+  </div>
+
+  <div>
+    <h2>Reto 3: Lista con eliminar individual</h2>
+    <input type="text" id="inputTareaReto3" placeholder="Nueva tarea">
+    <button id="botonAgregarReto3">Agregar</button>
+    <ul id="listaReto3"></ul>
+  </div>
+
+  <div>
+    <h2>Reto 4: Filtro en vivo</h2>
+    <input type="text" id="inputFiltro" placeholder="Buscar...">
+    <ul id="listaNombres">
+        <li>Ana</li>
+        <li>Luis</li>
+        <li>Marta</li>
+        <li>Andrés</li>
+        <li>Carla</li>
+    </ul>
+  </div>
+
+  
+    <h2>Reto 5: Modal</h2>
+    <button id="botonAbrirModal">Ver detalles</button>
+
+    <div id="modal" style="display: none;">
+        <p>Este es el contenido del modal.</p>
+        <button id="botonCerrarModal">Cerrar</button>
+    </div>
+
+    <h2>Carrito de compras</h2>
+    <div id="productos">
+        <div class="producto" data-precio="150">Camisa - $150 
+            <button class="agregar">Agregar</button>
+        </div>
+
+        <div class="producto" data-precio="300">Pantalón - $300 
+            <button class="agregar">Agregar</button>
+        </div>
+
+        <div class="producto" data-precio="450">Zapatos - $450 
+            <button class="agregar">Agregar</button>
+        </div>
+    </div>
+
+    <h3>Carrito</h3>
+    <ul id="carrito"></ul>
+    <p id="totalCarrito">Total: $0</p>
+
 
     <script src="pokemon.js" defer></script>
 </body>

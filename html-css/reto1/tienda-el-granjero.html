@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Tienda el granjero</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+
+    <body>
+        <header>
+            <a href="#">
+                <img src="https://placehold.co/600x400" alt="logo de tiendas el granjero">
+            </a>
+
+            <p></p>
+
+             <h1>
+                Tiendas el granjero
+                <span class="subtitulo-logo">Donde encuentras los mejores precios</span>
+             </h1>
+
+             <nav>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Quienes somos</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#">contacto</a></li>
+                </ul>
+             </nav>
+
+             <search>
+                <form action="/buscar" method="get">
+                    <label for="global-search">Buscar</label>
+                    <input
+                        type="search"   
+                        id="global-search"
+                        name="q"
+                        placeholder="Esciba lo que buscar"
+                        required
+                    >
+                </form>
+             </search>
+
+        </header>
+       
+        <main>
+
+            <section class="hero">
+                <h2>Precios geniales todos los dias</h2>
+                <img src="#" alt="banner de hero">
+                <p>Surtido nuevo todos los dias</p>
+                <a href="#">Comprar</a>
+            </section>
+
+            <section aria-labelledby="productos-destacados">
+                <h2 id="productos-destacados">Productos destacados</h2>
+                <article class="producto-semana-" data-id="p100" data-precio="550">
+                    <h3>Microondas 201-26</h3>
+                    <img src="" alt="imagen del producto">
+                    <p>Es producto pertenece a la linea universal decomponentes ahoradores de litio</p>
+                </article>
+            </section>
+
+            <section class="reseñas" aria-labelledby="reseñas-usuarios">
+                <h2 id="reseñas-usuarios">Reseñas de los usuario</h2>
+
+                <picture>
+                    <source media="(min-width: 600px)" srcset="banner-small.wepb">
+                    <img src="banner.wepb" alt="logo del hero" loading="lazy"> 
+                </picture>
+
+                <p>Lo que nuestros clientes dicen...</p>
+                <blockquote>
+                    <p>Servicio excelnte 100 % recomendados</p>
+                </blockquote>
+            </section>
+
+            <section class="formulario">
+                <h2>Registro VIP</h2>
+                <form action="mipagina.php" method="POST">
+                    <fieldset>
+                        <legend>Datos personales</legend>
+                    
+                        <div class="campoformulario">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" id="nombre" name="nombreUsuario" autocomplete="name" required>
+                        </div>
+
+                        <div class="campoformulario">
+                            <label for="apellido">Apellido:</label>
+                            <input type="text" id="apellido" name=apellidoUsuario>
+                        </div>
+                      
+                        <div class="campoformulario">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" autocomplete="email" name=emailUsuario required>
+                        </div>
+
+                        
+                        <div class="campoformulario">
+                            <label for="tel">Apellido:</label>
+                            <input type="tel" id="tel" name=telUsuario autocomplete="tel" >
+                        </div>
+                    <fieldset>
+
+                        <button id="botonForm">Registrarme</button>
+                </form>
+            </section>
+
+        </main>
+
+        <footer>
+
+
+        </footer>
+
+        <script src="" async defer></script>
+    </body>
+</html>

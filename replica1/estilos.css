@@ -23,14 +23,18 @@ body, header, main, footer, div, ul, li, a, h1, h2, p {
     background-size: cover;
     background-position: center;
     min-height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 20px; /* Espacio adicional desde la izquierda */
 }
 
 a.payment::before{
     content: "";
     background-image: url(imagenes/icon-loan-payment.webp);
     display: inline-block;
-    width: 16px;
-    height: 16px;
+    width: 48px;
+    height: 48px;
     background-size: contain;
     background-repeat: no-repeat;
     margin-right: 8px;
@@ -41,8 +45,8 @@ a.appointment::before {
     content: "";
     background-image: url(imagenes/icon-scheduled-appt.png);
     display: inline-block;
-    width: 16px;
-    height: 16px;
+    width: 48px;
+    height: 48px;
     background-size: contain;
     background-repeat: no-repeat;
     margin-right: 8px;
@@ -53,8 +57,8 @@ a.resources::before {
     content: "";
     background-image: url(imagenes/icon-financial-resources.png);
     display: inline-block;
-    width: 16px;
-    height: 16px;
+    width: 48px;
+    height: 48px;
     background-size: contain;
     background-repeat: no-repeat;
     margin-right: 8px;
@@ -65,14 +69,16 @@ a.carrer::before {
     content: "";
     background-image: url(imagenes/icon-career-opps.png);
     display: inline-block;
-    width: 16px;
-    height: 16px;
+    width: 48px;
+    height: 48px;
     background-size: contain;
     background-repeat: no-repeat;
     margin-right: 8px;
     vertical-align: middle;
+
 }
 
+/**************************************************************************************************************************************/
 .contendor-buscador {
     background-color: #002f45;
     display: flex;
@@ -80,7 +86,7 @@ a.carrer::before {
     align-items: center;
     padding: 0.5rem 2rem;
     margin: 0;
-    height: 80px;
+    height: auto;
 }
 
 .contendor-buscador ul {
@@ -96,28 +102,566 @@ a.carrer::before {
     margin: 0 10px;
 }
 
-form{
-    border: red 1px solid; 
-    width: 250px;
-    height: 50px;
+.contenedor-formulario {
+    display: flex;
+    align-items: center;
 }
 
-#caja-busqueda{
-    width: 250px;
-    height: 50px;
-    border-radius: 40px / 20px;
+/* 1. EL FORMULARIO (Fondo claro de la lupa) */
+.formulario-buscador {
+    display: flex;
+    align-items: center;
+    background-color: #175e7f; /* Color azul más claro del lado derecho */
+    border-radius: 25px;       /* Forma de píldora para todo el conjunto */
 }
 
-#caja-busqueda::placeholder{
-    background-color: #043d55;
-    border-radius: 20px;
+/* 2. EL INPUT (Fondo oscuro con borde) */
+#caja-busqueda {
+    background-color: #043d55; /* Color azul oscuro */
+    border: 1px solid #1c688c; /* Borde sutil */
     color: #fff;
-    background-color: #043d55;
-    border: 2px solid #145a78;
-    height: 150px;
+    width: 300px;
+    height: 40px;
+    padding-left: 20px; /* Espacio normal para escribir */
+    padding-right: 20px;
+    border-radius: 25px; 
+    font-size: 1rem;
+    outline: none;
 }
 
-#formulario_buscardor{
+#caja-busqueda::placeholder {
+    color: #fff;
+    opacity: 1;
+}
+
+/* 3. EL BOTÓN (Ya NO usamos position absolute) */
+.boton-formulario {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 0 15px; /* Esto le da el espacio a los lados a la lupa */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boton-formulario i {
+    display: flex;
+}
+
+/***********************************************************************************************************************************/
+
+/*MENU NAV BAR*/
+.contenedor-nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2rem 4rem;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-bank img{
+    width: 260px;
     height: auto;
-    width: 150px;
+    margin-right: 100px;
+}
+
+.nav-bar ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-bar a{
+    text-decoration: none;
+    margin: 0 10px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: 16px;
+    text-decoration: none;
+    color: #043d55;
+}
+
+.conteiner-btn-login button{
+    background-color:#175e7f;
+    color: #fff;
+    padding: 1rem 1rem;
+    font-weight: 900;
+    border-radius: 10px;
+    margin-left: 50px;
+    border: none;
+}
+
+.titulo{
+    display: none;
+}
+
+/**************************************************************************************************************************************/
+/* HERO DE LA PAGINA*/
+@keyframes fadeInSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-conteiner{
+    background-color: #fff;
+    padding: 4rem;
+    padding: 80px 25px 80px 25px;
+    width: 80%;
+    max-width: 600px;
+    height: auto;
+    margin: 0 0 0 50px; /* Mover a la izquierda */
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    opacity: 0;
+    animation: fadeInSlideUp 1s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+.hero-conteiner .hero-etiqueta-sm{
+    font-family: "parslayregular", cursive;
+    color: #f6861f;
+    font-weight: 400;
+    text-align: center;
+    font-size: 30px;
+}
+
+.hero-etiqueta-nrm{
+    text-align: center;
+    width: 100%;
+    margin-top: 0.75rem;
+    font-family: "crunoldregular", sans-serif;
+    font-weight: 900;
+    color: #043d55;
+    font-size: BOLD;
+}
+
+.hero-conteiner p{
+    color: #043d55;   
+    margin-top: 0.75rem;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.hero-conteiner a{
+    margin-top: 0.75rem;
+    font-size: 16px;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    padding: 14px 24px 11px;
+    color: #043d55;
+    background-color: #f6861f;
+    border-color: #f6861f;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 8px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 1.1;
+    box-shadow: none;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+/*************************************************************************************************************************************/
+/* Enlaces del header */
+
+#conteiner-desc{
+
+    background-color: #1c688c;
+    justify-content: center;
+    padding: 50px;
+}
+
+#conteiner-desc ul{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    list-style-type: none;
+    height: 30px;
+    
+}
+
+#conteiner-desc a{
+    color: #fff;
+    list-style: none;
+    text-decoration: none;
+    padding: 30px;
+    border-right: 2px #fff solid;
+    height: 30%; /* Ajustar altura del borde */
+    font-size: 25px;
+}
+
+#conteiner-desc .carrer{
+    border-right: none;
+}
+
+/*************************************************************************************************************************************/
+/* Porcentajes*/
+
+.numeros-tasas-porcentaje h2 {
+    color: #043d55;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.porcentajes-tasas p {
+    color: #555;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.porcentajes-tasas ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.porcentajes-tasas li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#contenedor-tasas{
+    background-color: #eeeeee;
+    padding: 150px;
+}
+
+.contendor-tasas-competitivas{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.contendor-tasas-competitivas h2 p{
+    flex: 1;
+    padding-bottom: 50px;
+    border: 1px red solid;
+}
+
+.contendor-tasas-competitivas h2 {
+    font-size: 32px;
+    color: #002f45;
+}
+
+.contendor-tasas-competitivas p {
+    font-size: 24px;
+    width: 700px;
+    text-align: center;
+    color: #002f45;
+    margin-bottom: 40px;
+}
+
+.contenedor-tasas-porcentajes{
+    display: flex;
+    justify-content: center;
+}
+
+
+.contenedor-tasas-porcentajes .cuadrito {
+    width:20%;
+    padding: 20px;
+    margin: 20px;
+}
+
+.rate-intro{
+    text-align: center;
+    font-size: 24px;
+    color: #043d55;
+}
+
+.porcentajes-tasas ul{
+    list-style: none;
+}
+
+.porcentajes-tasas{
+    display: flex;
+        
+}
+
+.numeros-tasas-porcentaje{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.numeros-tasas-porcentaje h2{
+    font-size: 80px;
+    color: #0f3447;
+    
+}
+
+.porcent{
+    color: #d58439;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.titlulo-tasas{
+    font-size: 48px;
+}
+
+ .cuadro-porcentaje{
+    margin: 20px;
+    color: #f6861f;
+    display: flex;
+    
+}
+
+.enlaces-tasas{
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 900;
+    text-align: center;
+}
+
+.enlaces-tasas a {
+    text-decoration: none;
+    color: #0f3447;
+    position: relative;
+    padding-right: 20px;
+    
+}
+
+.enlaces-tasas a::after {
+    font-family: "Font Awesome 6 Free";
+    content: "\f061"; /* Código para fa-arrow-right */
+    position: absolute;
+    right: -45px;
+    bottom: -20px;
+    color: #f6861f;
+    font-weight: 900;
+    transition: transform 0.3s ease;
+    padding: 20px;
+}
+
+.enlaces-tasas a:hover::after {
+    transform: translateX(3px);
+}
+
+/*************************************************************************************************************************************/
+.panel-blanco{
+    padding: 100px 150px;
+}
+
+.conteiner-panel-blanco{
+    padding: 15px;
+}
+
+.recuadro-imagen{
+    display: flex;
+    padding: 30px;
+   
+}
+
+.cuadro a{
+    text-decoration: none;
+    padding: 30px;
+    cursor: none;
+}
+
+.contenido{
+      width: 320px;
+      font-size: 20px;
+      justify-content: center;
+      text-align: center;
+      color:#175e7f;
+      padding: 30px;
+}
+
+.contenido h2{
+    font-weight: 900;
+    font-size: 24px;
+    color:#175e7f;
+    margin-bottom: 15px;
+
+}
+
+.contenido h2::after{
+    font-family: "Font Awesome 6 Free";
+    content: "\f061"; /* Código para fa-arrow-right */
+    color: #f6861f;
+    font-weight: 900;
+    padding: 10px;
+}
+
+.imagen {
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    position: relative;
+}
+
+.imagen img {
+    position: relative;
+    z-index: 2;
+}
+
+/* Home Loans */
+.cuadro:nth-child(1) .imagen::before {
+    background-color: #b38614; /* Naranja */
+}
+
+/* Business Loans */
+.cuadro:nth-child(2) .imagen::before {
+    background-color: #ea5e17; /* Azul */
+}
+
+/* Auto Loans */
+.cuadro:nth-child(3) .imagen::before {
+    background-color: #043d55; /* Azul oscuro */
+}
+
+/* Student Loans */
+.cuadro:nth-child(4) .imagen::before {
+    background-color: #17d737; /* Naranja claro */
+}
+
+.imagen::before {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: absolute;
+    left: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.recuadro-imagen {
+    justify-content: center;
+}
+
+/************************************************************************************************************************************/
+.nueva-seccion{
+    background-color: #eeeeee;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 8rem 8rem;
+}
+
+.enlace {
+    padding: 15px;
+    color: #0f3447;
+    border: 1px yellowgreen solid;
+    border-radius: 15px;
+    transition: background-color 0.3s ease;
+    position: relative;
+}
+
+.enlace h2 {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    position: relative;
+    padding-right: 25px;
+}
+
+
+
+.enlace:hover h2,
+.enlace.active h2 {
+    font-size: 24px;
+}
+
+
+.enlace h2::after {
+    content: "\f078"; /* Font Awesome chevron-down */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    transition: all 0.3s ease;
+    margin-left: 10px;
+}
+
+
+.enlace.active h2::before {
+    transform: translateX(5px);
+}
+
+.enlace p,
+.enlace a {
+    display: none;
+    font-size: 24px;
+    transition: font-size 0.3s ease;
+}
+
+.enlace.active p,
+.enlace.active a {
+    display: block;
+    font-size: 24px;
+    justify-content: center;
+}
+
+.enlace:hover {
+    background-color: #eeeeee;
+    color: #043d55;
+}
+
+.enlace:hover p,
+.enlace:hover a {
+    font-size: 16px;
+}
+
+.enlace p{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.enlace a{
+  text-decoration: none;
+  color: #0f3447;
+  font-weight: 900;
+  padding: 0;
+}
+
+.enlace a::after {
+    content: "\f054"; /* Font Awesome arrow-right */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: #f6861f; /* Orange color */
+    position: absolute;
+    padding-right: 10px;
+  
+    transition: all 0.3s ease;
+}
+
+
+.enlace:hover{
+    background-color: #fff;
+    color: #043d55;
 }

@@ -4,6 +4,94 @@
 
     Estructura semantica basica: header, nav, main, section, footer
 
+### Etiquetas html semanticas
+
+    **Header:** Es el contnedor de introduccion o navegacion de tu sitio. Suele llevar el logo, el memu principal o buscadores globales.
+    
+    **nav:** Para menus de navegacion o enlaces. 
+    
+    **main:** para el contenido principal unico 
+    
+    **seccion:** Define una seccion tematica autonoma dentro del documento. **regla de oro** debe llevar un <h2-h6> que explique de que se tratra, sino esta regla no se cumple usa un div no seccction 
+
+    **article:** Para contenido independiente (servicios, posts)
+
+    **footer:** para info de contacto/copyright 
+    
+    **atributos data-* ** se usan para controlas junto con js los elementos html 
+
+    **atributo loading: "lazy"**: le dice al navegador que no descargue la imagen inmediatamente, sino que espere hasta que el usuario haga scroll y esté a punto de llegar a la zona donde se encuentra la imagen.
+
+    **<picture>**: es un contenedor inteligente que permite mostrar diferentes versiones de una imagen según el tamaño de la pantalla, la resolución o el formato compatible del dispositivo Carga archivos ligeros solo cuando el equipo del usuario lo necesita.
+
+    resoluciones: 
+
+       -Móvil (Default): Todo lo que mida menos de 768px. Es la imagen base que se carga por defecto (siguiendo la filosofía Mobile-First).
+       -Tablet (md): Desde 768px hasta 1024px (cubre pantallas medianas y iPads).
+       -Escritorio (lg / xl): Desde 1024px en adelante (cubre laptops y monitores grandes).
+
+        <!-- 1. Pantallas de computadora (Escritorio) -->
+        <source media="(min-width: 1024px)" srcset="banner-desktop.webp">
+
+        <!-- 2. Pantallas de tablet (Medianas) -->
+        <source media="(min-width: 768px)" srcset="banner-tablet.webp">
+
+        <!-- 3. Pantallas de celulares (Por defecto / Mobile-First) -->
+        <img src="banner-mobile.webp" alt="Diseño simplificado para producción">
+
+        usos: 
+
+            🖼️ Banners principales y fondos (Hero Images)
+            Fotos de productos de E-commerce
+            🎨 Logotipos o gráficos con texto integrado
+    
+    **<blockquete>**: para representar citas textuales largas que provienen de otra fuente (como un libro, un autor, un discurso o
+                        un sitio web externo). El atributo moderno: **cite** Para que tu código sea 100% profesional y limpio ante los ojos de Google (SEO), puedes usar el atributo cite dentro de la etiqueta para indicar la URL de donde sacaste la información
+
+    **form:** son aquellos que se construyen utilizando únicamente las etiquetas, atributos y validaciones que el propio navegador web  
+            trae integrados de fábrica, sin depender de librerías externas de JavaScript
+
+    Tipos de input: 
+
+        1. type="email": Valida automáticamente que el texto tenga una estructura de correo (usuario@dominio.com)
+        2.type="tel": Abre el teclado numérico en celulares
+        3.type="date": Despliega un calendario nativo del sistema operativo (iOS, Android, Windows) para elegir fechas de forma cómoda.
+        4.type="number": Añade flechas para subir/bajar y restringe el texto a solo números
+        5.type="color": Abre la paleta de colores nativa del dispositivo
+        6.type="range": Crea una barra deslizable (slider) para elegir un rango numérico.
+
+    Validaciones nativas: 
+
+        -required: Hace que el campo sea obligatorio. Si intentas enviar el formulario vacío, el navegador detiene el envío y muestra un mensaje de alerta flotante
+        -.minlength y maxlength: Controlan el mínimo y máximo de caracteres permitidos (ej. minlength="8" para contraseñas)
+        -.min y max: Controlan los valores numéricos mínimos y máximos (ej. para restringir que solo entren mayores de 18 años)
+        -.pattern: Permite usar Expresiones Regulares (RegEx) directamente en HTML para validar cosas complejas, como un formato de cédula o una contraseña que requiera mayúsculas y números.
+
+    Atributo action y method: Trabajan juntos para definir a dónde se envían los datos del formulario y cómo se transportan a través de internet.
+
+   **Action**: Destino en el servidor: Normalmente apunta a un archivo de backend (como /enviar-datos, procesar.php, api/v1/users, etc.)
+   **Method**:El atributo method define el protocolo HTTP que se utilizará para transferir los datos.
+
+        Método GET (Público y visible) Envía los datos agregándolos directamente al final de la URL de la barra de direcciones. se usa: Para búsquedas, filtros o consultas donde no se maneje información confidencial.
+
+        Método POST (Oculto y seguro) Envía los datos de forma "invisible" dentro del cuerpo de la petición HTTP (HTTP Request Body). Los datos no aparecen en la barra de direcciones de la URL. se usa: Para crear usuarios, iniciar sesión, enviar mensajes de contacto, subir archivos o procesar pagos
+
+    **Fieldset:** Sirve para agrupar de forma lógica varios campos de entrada (<input>, <select>, <textarea>) que tienen relación entre sí.
+
+     Si le añades el atributo disabled al <fieldset> (así: <fieldset disabled>), bloquearás automáticamente todos los inputs que estén en su interior de un solo golpe, sin necesidad de desactivarlos uno por uno con JavaScript.
+
+    **legend**: Es la etiqueta que define el título o la etiqueta del grupo
+
+    **label e input**: son la pareja más importante de cualquier formulario en la web. Trabajan de la mano: el <input> es el campo donde el usuario escribe o interactúa, y el <label> es el texto que explica qué información se está pidiendo
+
+        Relacionar input y label: Utilizas el atributo for en el <label> y lo haces coincidir exactamente con el atributo id del <input>.
+
+        <label for="correo-usuario">Correo Electrónico:</label>
+        <input type="email" id="correo-usuario" name="email">
+
+
+
+        
 ## css 
 
     Referenciar una hoja de estilo: 
