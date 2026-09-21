@@ -148,6 +148,62 @@ Para cargar archivos, como imágenes, documentos, etc.
 ```html
 <input type="file" id="archivo" name="archivo" accept=".jpg,.png" multiple>
 ```
+El atributo `accept` en el tipo de entrada `input` de tipo `file` permite especificar los tipos de archivos que un usuario puede seleccionar al subir un archivo. Esto mejora la experiencia del usuario al evitar que puedan seleccionar archivos no compatibles y puede facilitar la validación del lado del cliente.
+
+Aquí tienes una lista de los tipos de archivos que puedes especificar utilizando el atributo `accept`:
+
+1. **MIME Types**: Puedes especificar MIME types para permitir solo ciertos tipos de archivos. Por ejemplo:
+   - `image/*`: Imágenes
+   - `application/pdf`: Archivos PDF
+   - `application/msword`: Archivos de Word
+   - `video/*`: Vídeos
+   - `audio/*`: Audio
+
+2. **Extensión de Archivo**: Puedes especificar extensiones de archivo separadas por comas. Por ejemplo:
+   - `image/png, image/jpeg`: Imágenes PNG e JPEG
+   - `application/pdf, application/msword`: Archivos PDF y Word
+   - `video/mp4, video/quicktime`: Vídeos MP4 y QuickTime
+
+3. **Múltiples Tipos**: Puedes combinar MIME types y extensiones de archivo. Por ejemplo:
+   - `image/png, image/jpeg, application/pdf`: Imágenes PNG e JPEG y archivos PDF
+
+```html
+<form action="/subir-comprobante" method="POST" enctype="multipart/form-data">
+  
+  <fieldset>
+    <legend>Documentación de Respaldo</legend>
+
+    <label for="comprobante-pago">Sube tu comprobante (Solo imágenes o PDF):</label>
+    <input 
+      type="file" 
+      id="comprobante-pago" 
+      name="comprobante"
+      accept="image/*, .pdf"
+      multiple
+      required
+    >
+  </fieldset>
+</form>
+```
+- **Atributo enctype**: se coloca exclusivamente en la etiqueta <form> Le indica al navegador cómo debe empaquetar y formatear los datos 
+                        del formulario antes de enviarlos a través de internet hacia el servidor 
+                    
+1. multipart/form-data (Obligatorio para subir Archivos)
+```html
+<form action="/subir-perfil" method="POST" enctype="multipart/form-data">
+  <input type="file" name="foto_usuario">
+  <button type="submit">Subir</button>
+</form>
+```
+
+2. application/x-www-form-urlencoded (El valor por defecto) 
+<!-- No hace falta escribirlo, el navegador asume este comportamiento solo -->
+<form action="/login" method="POST">
+  <input type="email" name="correo">
+</form>
+
+3. text/plain (Solo para depuración / Pruebas) Envía los datos en texto plano y limpio, tal cual los escribió el usuario, línea por línea, sin ningún tipo de codificación ni símbolos raros.
+
 
 ### 10. Hidden
 Para ocultar un input que no se muestra al usuario, pero que se envía al servidor.
@@ -264,6 +320,106 @@ Para seleccionar un valor dentro de un rango específico, como un deslizador.
      ```html
      <input type="number" id="edad" name="edad" min="0" max="120">
      ```
+
+### validaciones con pseudo-clases css
+
+### 1. `:focus-within` 
+La pseudo-clase `:focus-within` se aplica a un elemento cuando uno de sus elementos descendientes tiene el foco. Esto puede ser útil para destacar contenedores de formulario cuando un campo específico
+está en uso.
+
+```css
+.grupo-input {
+  border: 2px solid #ccc;
+  padding: 10px;
+  transition: border-color 0.3s ease;
+}
+
+.grupo-input:focus-within {
+  border-color: #007bff;
+  background-color: #f8f9fa;
+}
+
+```
+### 2. `:disabled`
+La pseudo-clase `:disabled` se aplica a elementos que están desactivados. Esto puede ser útil para aplicar estilos distintivos a elementos que no son interactivos.
+
+```css
+.btn-enviar {
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-enviar:disabled {
+  background-color: #6c757d;
+  opacity: 0.5;
+  cursor: not-allowed; /* Cambia el cursor a un símbolo de prohibido */
+}
+
+
+```
+
+### 3. `:placeholder-shown`
+La pseudo-clase `:placeholder-shown` se aplica a un elemento input cuando su valor es el texto del placeholder. Esto puede ser útil para estilizar el placeholder o para mostrar información adicional.
+
+```css
+input:placeholder-shown {
+  color: #aaa;
+}
+```
+### Atributos de entrada virtual 
+
+El atributo `inputmode` de HTML5 es una forma conveniente de sugerir al navegador qué tipo de teclado debería mostrar para un campo de entrada
+
+1. **text**
+   - **Descripción**: Muestra un teclado de texto general.
+   - **Ejemplo**:
+     ```html
+     <input type="text" inputmode="text" placeholder="Texto general">
+     ```
+
+2. **decimal**
+   - **Descripción**: Muestra un teclado de números decimales.
+   - **Ejemplo**:
+     ```html
+     <input type="text" inputmode="decimal" placeholder="Número decimal">
+     ```
+
+3. **numeric**
+   - **Descripción**: Muestra un teclado de números enteros.
+   - **Ejemplo**:
+     ```html
+     <input type="text" inputmode="numeric" placeholder="Número entero">
+     ```
+
+4. **tel**
+   - **Descripción**: Muestra un teclado de teclado para números de teléfono.
+   - **Ejemplo**:
+     ```html
+     <input type="text" inputmode="tel" placeholder="Número de teléfono">
+     ```
+
+5. **url**
+   - **Descripción**: Muestra un teclado de URL.
+   - **Ejemplo**:
+     ```html
+     <input type="text" inputmode="url" placeholder="URL">
+     ```
+
+6. **email**
+   - **Descripción**: Muestra un teclado de correo electrónico.
+   - **Ejemplo**:
+     ```html
+     <input type="text" inputmode="email" placeholder="Correo Electrónico">
+     ```
+
+7. **search**
+   - **Descripción**: Muestra un teclado de búsqueda, lo que a menudo es útil para aplicaciones que requieren un control adicional en el teclado.
+   - **Ejemplo**:
+     ```html
+     <input type="text" inputmode="search" placeholder="Búsqueda">
+     ```
+
 
 - **Atributos de UX Nativa (autocomplete)**:
   - `autocomplete`: Le dice al navegador qué tipo de dato va ahí para que sugiera rellenarlo con un solo clic usando los datos guardados del usuario.

@@ -110,6 +110,32 @@
                 </form>
             </section>
 
+            <section class="soporte-tecnico" aria-labelledby="soporte">
+                <h2 id="soporte">Soporte tecnico VIP</h2>
+
+                <form action="mipagina.php" method="POST" enctype="multipart/form-data">
+                    <div>
+                        <label for="DescripcionP">Descripcion del problema tecnico:</label>
+
+                        <textarea id="DescripcionP" name="comentarioP" rows="5"
+                        placeholder="Escribe tu problema..."
+                        required
+                        ></textarea>
+                    </div>
+
+                    <div>
+                        <label for="mensaje">Subir captura del error:</label>
+                        <input type="file" id="mensaje" name="comprobanteM" accept="image/png, image/jpeg" required>
+                    </div>
+
+                    <button id="botonRegistro" type="submit">Enviar reporte</button>
+                    
+                </form>
+
+
+
+            </section>
+
         </main>
 
         <footer>
