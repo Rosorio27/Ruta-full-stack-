@@ -549,24 +549,22 @@ son
 
 ### Model box 
 
-    Todo elemento html es en el fondo una caja rectangular compuesta por 4 capas de adentro hacia afuera 
-    1.Content -texto o imagen 
-    2.Padding - espacio interno entre el contenido y el borde 
-    3.Border - el borde de la caja 
-    4.margin - espacio externo entre esta caja y los elementos vecinos
+Todo elemento html es en el fondo una caja rectangular compuesta por 4 capas de adentro hacia afuera 
+- 1. Content -texto o imagen 
+- 2. Padding - espacio interno entre el contenido y el borde 
+- 3. Border - el borde de la caja 
+- 4. margin - espacio externo entre esta caja y los elementos vecinos
 
-    content-box 
-    se usa por default se le suma el tamaño del padding interno y hace que ocupe mas esapcion la caja
+- **content-box:** se usa por default se le suma el tamaño del padding interno y hace que ocupe mas esapcion la caja
+```css
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+```
+-**Max-width:** es una de las herramientas más importantes del diseño web responsivo (Responsive Web Design). Define el límite  
+                superior de ancho que un elemento puede llegar a medir en la pantalla. **Le da libertad al elemento para encogerse si la pantalla se vuelve más pequeña**
 
-    box-sizing: border-box 
-    mantiene la relacion del tamaño del contenido y no suma el padding, dando un tamaño esperado 
-
-    solucion: se le aplica box-sizing a todo el documneto 
-
-    * {
-
-        box-sizing: border-box; 
-    }
+- El secreto de aplicar max-wid
 
 ### Colores y unidades 
 

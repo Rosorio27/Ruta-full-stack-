@@ -3,21 +3,31 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Tienda el granjero</title>
-        <meta name="description" content="">
+        <title>Tienda el granjero | Producto premium</title>
+        <meta name="description" content="Encuentra calzado, ropa y utensilios del hogar a buen precio todo esto y muucho mas en El Granjero. 
+                                         Cuenta con envíos rápidos. ¡Haz tu pedido en línea hoy!">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta property="og:title" content="Tienda el granjero">
+        <meta property="og:description" content="Tiendas El granjero donde encuntras una alta gama de articulos y utensilios para el hogar. 
+                                                Envios a nivel nacional">
+        <meta property="og:image" content="https://tiendaelgranjero.com">
+        <meta property="og:url" content="http://tiendaelgranjero.com">
+
+        <meta name="robots" content="noindex, nofollow">
+
+        <link rel="canonical" href="https://tiendaelgranjero.com">
+
+
         <link rel="stylesheet" href="">
     </head>
 
     <body>
         <header>
-            <a href="#">
-                <img src="https://placehold.co/600x400" alt="logo de tiendas el granjero">
-            </a>
-
-            <p></p>
-
              <h1>
+                <a href="#">
+                    <img src="https://placehold.co/600x400" alt="logo de tiendas el granjero" width="120px">
+                </a>
                 Tiendas el granjero
                 <span class="subtitulo-logo">Donde encuentras los mejores precios</span>
              </h1>
@@ -57,11 +67,16 @@
 
             <section aria-labelledby="productos-destacados">
                 <h2 id="productos-destacados">Productos destacados</h2>
-                <article class="producto-semana-" data-id="p100" data-precio="550">
+
+                <article class="producto-semana" data-id="p100" data-precio="550">
+                    
                     <h3>Microondas 201-26</h3>
                     <img src="" alt="imagen del producto">
                     <p>Es producto pertenece a la linea universal decomponentes ahoradores de litio</p>
+                   
+                    <span class="etiqueta-oferta">!oferta!</span>
                 </article>
+
             </section>
 
             <section class="reseñas" aria-labelledby="reseñas-usuarios">
@@ -131,10 +146,36 @@
                     <button id="botonRegistro" type="submit">Enviar reporte</button>
                     
                 </form>
+            </section>
 
 
+
+            <section class="access" aria-labelledby="accessP">
+                <h2 id="accessP">Controles Accesibles de Pruebas</h2>
+                <button type="button" id="botton">
+                    <span aria-hidden="true"> 🛒</span>
+                    <span class="sr-only">Ver mi carrito de compras (3 productos)</span>                     
+                    Comprar
+                </button>
+                <div id="alert" role="alert" class="mensaje-error"></div>
+            </section>
+
+            <section>
+                <button type="button" id="btn-control"
+                aria-expanded="false"
+                aria-controls="lista-servicios"
+                >
+                Servicios
+                </button>
+
+                <ul id="lista-servicios">
+                    <li>Ventas Mayorista</li>
+                    <li>Envios Express</li>
+                    <li>Servicio de entregas</li>
+                </ul>
 
             </section>
+
 
         </main>
 
@@ -143,6 +184,32 @@
 
         </footer>
 
-        <script src="" async defer></script>
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org", 
+                "@type": "Product", 
+                "name": "Microondas 201-26 ", 
+                "image": [
+                    "https://elgranjero.com"
+                ], 
+                "description": "Es un producto de linea blanca de uso de cocina",
+                "sku": "GRAND-MIC-20126", 
+                "mpn": "201-26",
+                "brand": {
+                     "@type": "Brand",
+                     "name": "El Granjero"
+                }, 
+                "offers": {
+                    "@type": "Offer", 
+                    "url": "https://elgranjero.com", 
+                    "priceCurrency": "HNL", 
+                    "price": 450.00, 
+                    "priceValidUntil": "2027-12-31",
+                    "itemCondition": "https://schema.orgNewCondition",
+                    "availability": "https://schema.orgInStock"
+                }
+            }
+
+        </script>
     </body>
 </html>

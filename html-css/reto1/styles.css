@@ -1,0 +1,132 @@
+*,*::after, *::before{
+    box-sizing: border-box;
+}
+
+.anuncioDestacado{
+    width: 350px; 
+    padding: 25px;
+    border: solid 4px;
+    margin-bottom: 40px;
+}
+
+.contenedor-fluido{
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    overflow-x: auto;
+}
+
+.soporte-tecnico, .soporte-tecnico * {
+    font-family: sans-serif;
+    color: #1a252f;
+}
+
+.soporte-tecnico textarea,
+.soporte-tecnico label{
+
+    font-family: inherit;
+    color: inherit;
+}
+
+.velo-pantalla{
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.velo-texto{
+    color: #FFFFFF
+}
+
+.btn-primario{
+    background-color: hsl(210, 80%, 50%);
+}
+
+.btn-primario:hover{
+    background-color: hsl(210, 80%, 40%);
+}
+
+#productos-destacados h2{
+    font-size: 2rem;
+}
+
+h3{
+    font-size: 1.5rem;
+}
+
+.btn-agencia{
+
+    padding: 1em, 2em;
+}
+
+.btn-carrito{
+    font-size: 1ren;
+}
+
+.btn-hero{
+    font-size: 2rem;
+}
+
+body{
+    font-family: Arial, 'Poppins', sans-serif;
+}
+
+.produto-semana h3{
+    font-family: Georgia, 'Times New Roman', serif;
+}
+
+.producto-semana{
+    transform: translateX(0) scale(1); 
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.producto-semana:hover{
+    transform: translateY(-10px) scale(1.03);
+}
+
+.etiqueta-oferta{
+    position: absolute;
+    top: 15px;
+    right: 15;
+}
+
+header{
+    position: sticky;
+    top: 0;
+}
+
+
+.btn-whatsapp{
+    position: fixed;
+    botton: 50px; 
+    z-index: 999;
+}
+
+.btn-carrito{
+    transition: background-color 0.25s ease;
+}
+
+@keyframes pulsacion-alerta {
+
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0.4;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.mensaje-error{
+    animation: pulsacion-alerta  2s ease-in-out infinite;
+}
+
+@keyframes girar {
+    0%{ transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+
+.cargador-linea{
+    animation: girar 0.8s linear infinite;
+}
