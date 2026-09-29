@@ -1,0 +1,117 @@
+/**********************************FORMATEO Y VARIABLES DE ENTORNO******************************/
+@font-face {
+  font-family: 'Natom Pro';
+  src: url('/src/assets/fuentes/NatomPro.woff2') format('woff2'); /* El formato más rápido del mercado */
+  font-weight: 900; /* Equivalente al peso Black/Ultra Bold de tu manual */
+  font-style: normal;
+  font-display: swap; /* ✅ OBLIGATORIO: Evita el texto invisible y acelera el LCP en Google */
+}
+
+:root {
+  /* Paleta Oficial del Manual de Identidad (Sintaxis HSL Avanzada) */
+  --color-brand: hsl(20, 83%, 61%); /* Naranja Entusiasmo Oficial (#EE804A) */
+  --color-brand-hover: hsl(20, 83%, 51%); /* Hover Orgánico Automático */
+  --color-gray: hsl(60, 1%, 44%); /* Gris Equilibrio Oficial (#585857) */
+  --color-dark: hsl(
+    210,
+    33%,
+    2%
+  ); /* Negro Elegancia Premium Oficial (#020304) */
+  --color-bg: hsl(0, 0%, 100%);
+  --color-border: hsl(240, 5%, 91%);
+  --color-code-bg: hsl(50, 22%, 94%);
+  --color-exito: hsl(145, 63%, 42%);
+  --color-alerta: hsl(4, 90%, 58%);
+  --shadow-main:
+    rgba(2, 3, 4, 0.08) 0 10px 15px -3px, rgba(2, 3, 4, 0.04) 0 4px 6px -2px;
+
+  /* ✅ CONFIGURACIÓN REFINADA: Asignamos tu tipografía oficial a los encabezados */
+  --font-heading: 'Natom Pro', system-ui, sans-serif;
+  --font-sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: ui-monospace, Consolas, monospace;
+
+  /* Espaciados Modulares Estándar de Hardware */
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3.5rem;
+}
+
+/********************************************************************************************/
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+header,
+main,
+section,
+article,
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+form,
+input,
+button {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(
+    --font-heading
+  ); /* ✅ Tu Natom Pro gobernará todos los títulos de Penguin */
+  font-weight: 900;
+  color: var(--color-dark);
+  letter-spacing: -0.03em; /* Un sutil ajuste de tracking para fuentes Black geométricas */
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  min-height: 100vh;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ====================================================================== */
+/* 3. EVOLUCIÓN PROGRESIVA (Puntos de Quiebre de Escritorio)              */
+/* ====================================================================== */
+@media (min-width: 1024px) {
+  html {
+    font-size: 18px; /* Crece de forma elástica a 18px en monitores grandes */
+  }
+}
+
+/*******************************************************************************************/

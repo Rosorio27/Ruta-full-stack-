@@ -1,132 +1,305 @@
-*,*::after, *::before{
-    box-sizing: border-box;
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
 }
 
-.anuncioDestacado{
-    width: 350px; 
-    padding: 25px;
-    border: solid 4px;
-    margin-bottom: 40px;
+.anuncioDestacado {
+  width: 350px;
+  padding: 25px;
+  border: solid 4px;
+  margin-bottom: 40px;
 }
 
-.contenedor-fluido{
-    max-width: 600px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 20px;
-    overflow-x: auto;
+.contenedor-fluido {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  overflow-x: auto;
 }
 
-.soporte-tecnico, .soporte-tecnico * {
-    font-family: sans-serif;
-    color: #1a252f;
+.soporte-tecnico,
+.soporte-tecnico * {
+  font-family: sans-serif;
+  color: #1a252f;
 }
 
 .soporte-tecnico textarea,
-.soporte-tecnico label{
-
-    font-family: inherit;
-    color: inherit;
+.soporte-tecnico label {
+  font-family: inherit;
+  color: inherit;
 }
 
-.velo-pantalla{
-    background-color: rgba(0, 0, 0, 0.6);
+.velo-pantalla {
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
-.velo-texto{
-    color: #FFFFFF
+.velo-texto {
+  color: #ffffff;
 }
 
-.btn-primario{
-    background-color: hsl(210, 80%, 50%);
+.btn-primario {
+  background-color: hsl(210, 80%, 50%);
 }
 
-.btn-primario:hover{
-    background-color: hsl(210, 80%, 40%);
+.btn-primario:hover {
+  background-color: hsl(210, 80%, 40%);
 }
 
-#productos-destacados h2{
-    font-size: 2rem;
+#productos-destacados h2 {
+  font-size: 2rem;
 }
 
-h3{
-    font-size: 1.5rem;
+h3 {
+  font-size: 1.5rem;
 }
 
-.btn-agencia{
-
-    padding: 1em, 2em;
+.btn-agencia {
+  padding: 1em, 2em;
 }
 
-.btn-carrito{
-    font-size: 1ren;
+.btn-carrito {
+  font-size: 1ren;
 }
 
-.btn-hero{
-    font-size: 2rem;
+.btn-hero {
+  font-size: 2rem;
 }
 
-body{
-    font-family: Arial, 'Poppins', sans-serif;
+body {
+  font-family: Arial, 'Poppins', sans-serif;
 }
 
-.produto-semana h3{
-    font-family: Georgia, 'Times New Roman', serif;
+.etiqueta-oferta {
+  position: absolute;
+  top: 15px;
+  right: 15;
 }
 
-.producto-semana{
-    transform: translateX(0) scale(1); 
-    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+.btn-whatsapp {
+  position: fixed;
+  bottom: 50px;
+  z-index: 999;
 }
 
-.producto-semana:hover{
-    transform: translateY(-10px) scale(1.03);
-}
-
-.etiqueta-oferta{
-    position: absolute;
-    top: 15px;
-    right: 15;
-}
-
-header{
-    position: sticky;
-    top: 0;
-}
-
-
-.btn-whatsapp{
-    position: fixed;
-    botton: 50px; 
-    z-index: 999;
-}
-
-.btn-carrito{
-    transition: background-color 0.25s ease;
+.btn-carrito {
+  transition: background-color 0.25s ease;
 }
 
 @keyframes pulsacion-alerta {
-
-    0%{
-        opacity: 1;
-    }
-    50%{
-        opacity: 0.4;
-    }
-    100%{
-        opacity: 1;
-    }
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-.mensaje-error{
-    animation: pulsacion-alerta  2s ease-in-out infinite;
+.mensaje-error {
+  animation: pulsacion-alerta 2s ease-in-out infinite;
 }
 
 @keyframes girar {
-    0%{ transform: rotate(0deg);}
-    100%{transform: rotate(360deg);}
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
-.cargador-linea{
-    animation: girar 0.8s linear infinite;
+.cargador-linea {
+  animation: girar 0.8s linear infinite;
+}
+
+.subtitulo-logo {
+  font-size: 2rem;
+  color: blue;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  width: 100%;
+  align-items: center;
+  border: #ddd solid 1px;
+  padding: 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.4rem;
+  text-align: center;
+  border: solid 1px blue;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  justify-content: flex-start;
+  border: solid orange 1px;
+  order: 2;
+}
+
+.buscador {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.buscador form {
+  width: 100%;
+  max-width: 320px; /* Evita que el input se estire de forma fea en pantallas medianas */
+}
+
+.buscador input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.menu {
+  width: 100%;
+}
+
+.menu ul {
+  border: solid red 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #333333;
+  font-weight: 500;
+  font-size: 0.95rem; /* Letra sutil para el teléfono */
+}
+
+/*Para pantallas grander*/
+
+@media (min-width: 1024px) {
+  header h1 {
+    font-size: 1.5rem; /* Crece la letra de forma elástica en PC */
+  }
+
+  /* 🟢 TUS REGLAS MATEMÁTICAS GANADORAS PARA LA PC: */
+
+  .logo {
+    flex: 1; /* Se vuelve elástico hacia la izquierda */
+    flex-direction: row;
+    justify-content: flex-start; /* Clava el logo a la extrema izquierda */
+  }
+
+  .menu {
+    /* ¡Tu freno de mano ganador! Toma exactamente la cuarta parte del monitor */
+    width: 25%;
+    flex: 0 0 auto;
+  }
+
+  .menu ul {
+    justify-content: center; /* Centra los enlaces dentro de su 25% */
+    gap: 25px; /* Más aire de separación en computadoras */
+  }
+
+  .buscador {
+    flex: 1; /* Se vuelve elástico hacia la derecha */
+    justify-content: flex-end; /* Clava el buscador a la extrema derecha */
+  }
+
+  .buscador form {
+    max-width: 240px; /* Tamaño elegante para la barra de buscar en PC */
+  }
+}
+
+.texto-corporativo {
+  display: hola;
+}
+
+@media (min-width: 768px) {
+  .texto-corporativo {
+    display: block;
+  }
+}
+
+#productos-destacados {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  border: solid 1px red;
+}
+
+.contenedor-catalogo {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(580px, 1fr));
+}
+
+.contenedor-catalogo p {
+  flex-grow: 1;
+  border: solid blue 1px;
+  justify-content: center;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 15px 30px;
+  border: solid red 1px;
+}
+
+.hero a {
+  order: -1;
+}
+
+.hero img {
+  order: 1;
+}
+
+.layout-completo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto;
+  gap: 15px;
+
+  width: 100%;
+  grid-template-areas:
+    'header header'
+    'main main';
+}
+
+header {
+  grid-area: header;
+}
+
+main {
+  grid-area: main;
+}
+
+.contenedor-catalogo {
+  display: flex;
+  flex-direction: column;
+}
+
+@supports (display: grid;) {
+  .contenedor-catalogo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
 }
